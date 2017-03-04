@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{83B9E093-9562-42CF-ADB6-664EF59BFE87}</ProjectGuid>
+    <RootNamespace>DirectX9</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="BuildSetMap.h" />
+    <ClInclude Include="bullet.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Caxis.h" />
+    <ClInclude Include="CBuildCamera.h" />
+    <ClInclude Include="CBuildImage.h" />
+    <ClInclude Include="CBuildLight.h" />
+    <ClInclude Include="CBuildLoadMap.h" />
+    <ClInclude Include="CBuildManager.h" />
+    <ClInclude Include="CBuildMap.h" />
+    <ClInclude Include="CBuildMenu.h" />
+    <ClInclude Include="CBuildMenu_Another.h" />
+    <ClInclude Include="CBuildMenu_Enemy.h" />
+    <ClInclude Include="CBuildMenu_Prop.h" />
+    <ClInclude Include="CBuildMenu_Wall.h" />
+    <ClInclude Include="CBulletHoles.h" />
+    <ClInclude Include="CCeiling.h" />
+    <ClInclude Include="CColumnar.h" />
+    <ClInclude Include="CDoor.h" />
+    <ClInclude Include="CDoorEffect.h" />
+    <ClInclude Include="CEnd.h" />
+    <ClInclude Include="CEnemey_Bullet_Up.h" />
+    <ClInclude Include="CEnemy_001.h" />
+    <ClInclude Include="CEnemy_002.h" />
+    <ClInclude Include="CEnemy_Bullet_Down.h" />
+    <ClInclude Include="CEnemy_Bullet_Left.h" />
+    <ClInclude Include="CEnemy_Bullet_Right.h" />
+    <ClInclude Include="CEnemy_Effect.h" />
+    <ClInclude Include="CExplosion.h" />
+    <ClInclude Include="CField.h" />
+    <ClInclude Include="CGame.h" />
+    <ClInclude Include="CGameCeiling.h" />
+    <ClInclude Include="CGameCeiling_data.h" />
+    <ClInclude Include="CGameDoor.h" />
+    <ClInclude Include="CGameDoor_data.h" />
+    <ClInclude Include="CGameEnemy_001.h" />
+    <ClInclude Include="CGameEnemy_001_data.h" />
+    <ClInclude Include="CGameEnemy_002.h" />
+    <ClInclude Include="CGameEnemy_002_data.h" />
+    <ClInclude Include="CGamePoint.h" />
+    <ClInclude Include="CGamePoint_data.h" />
+    <ClInclude Include="CGameRobot.h" />
+    <ClInclude Include="CGameWall_001.h" />
+    <ClInclude Include="CGameWall_001_data.h" />
+    <ClInclude Include="CGameWall_002.h" />
+    <ClInclude Include="CGameWall_002_data.h" />
+    <ClInclude Include="CGlass.h" />
+    <ClInclude Include="CHpImage.h" />
+    <ClInclude Include="CHpScore.h" />
+    <ClInclude Include="CPowerImage.h" />
+    <ClInclude Include="CPowerMax.h" />
+    <ClInclude Include="CPowerPoly.h" />
+    <ClInclude Include="CRevolverModel.h" />
+    <ClInclude Include="CLight.h" />
+    <ClInclude Include="CLoadMap.h" />
+    <ClInclude Include="CModel.h" />
+    <ClInclude Include="CPlayer.h" />
+    <ClInclude Include="CPoint.h" />
+    <ClInclude Include="CResult.h" />
+    <ClInclude Include="CResultbg.h" />
+    <ClInclude Include="CRobot.h" />
+    <ClInclude Include="Cskillbg.h" />
+    <ClInclude Include="CSmoke.h" />
+    <ClInclude Include="CSpark.h" />
+    <ClInclude Include="CStart.h" />
+    <ClInclude Include="CTalkRobotImage.h" />
+    <ClInclude Include="CTextbubble.h" />
+    <ClInclude Include="CTime.h" />
+    <ClInclude Include="CTimeScore.h" />
+    <ClInclude Include="CTitle.h" />
+    <ClInclude Include="CTitleCamera.h" />
+    <ClInclude Include="CTitleImage.h" />
+    <ClInclude Include="CTitleLight.h" />
+    <ClInclude Include="CTitleMark.h" />
+    <ClInclude Include="CTitleMenu.h" />
+    <ClInclude Include="CTitleModel.h" />
+    <ClInclude Include="CTitleRobot.h" />
+    <ClInclude Include="CTitleSkyBox.h" />
+    <ClInclude Include="CTitle_R_Model.h" />
+    <ClInclude Include="CTrail.h" />
+    <ClInclude Include="CTransferEffect.h" />
+    <ClInclude Include="CWall_001.h" />
+    <ClInclude Include="CWall_002.h" />
+    <ClInclude Include="cylinder.h" />
+    <ClInclude Include="debugProc.h" />
+    <ClInclude Include="fade.h" />
+    <ClInclude Include="main.h" />
+    <ClInclude Include="manager.h" />
+    <ClInclude Include="Mode.h" />
+    <ClInclude Include="number.h" />
+    <ClInclude Include="portal.h" />
+    <ClInclude Include="renderer.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="scene.h" />
+    <ClInclude Include="scene2D.h" />
+    <ClInclude Include="scene3D.h" />
+    <ClInclude Include="sceneBillboard.h" />
+    <ClInclude Include="sceneInput.h" />
+    <ClInclude Include="sceneMouse.h" />
+    <ClInclude Include="sceneNumber.h" />
+    <ClInclude Include="sceneScore.h" />
+    <ClInclude Include="sceneX.h" />
+    <ClInclude Include="score.h" />
+    <ClInclude Include="SetMap.h" />
+    <ClInclude Include="skybox.h" />
+    <ClInclude Include="sound.h" />
+    <ClInclude Include="Unique_skill.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BuildSetMap.cpp" />
+    <ClCompile Include="bullet.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Caxis.cpp" />
+    <ClCompile Include="CBuildCamera.cpp" />
+    <ClCompile Include="CBuildImage.cpp" />
+    <ClCompile Include="CBuildLight.cpp" />
+    <ClCompile Include="CBuildLoadMap.cpp" />
+    <ClCompile Include="CBuildManager.cpp" />
+    <ClCompile Include="CBuildMap.cpp" />
+    <ClCompile Include="CBuildMenu.cpp" />
+    <ClCompile Include="CBuildMenu_Another.cpp" />
+    <ClCompile Include="CBuildMenu_Enemy.cpp" />
+    <ClCompile Include="CBuildMenu_Prop.cpp" />
+    <ClCompile Include="CBuildMenu_Wall.cpp" />
+    <ClCompile Include="CBulletHoles.cpp" />
+    <ClCompile Include="CCeiling.cpp" />
+    <ClCompile Include="CColumnar.cpp" />
+    <ClCompile Include="CDoor.cpp" />
+    <ClCompile Include="CDoorEffect.cpp" />
+    <ClCompile Include="CEnd.cpp" />
+    <ClCompile Include="CEnemy_001.cpp" />
+    <ClCompile Include="CEnemy_002.cpp" />
+    <ClCompile Include="CEnemy_Bullet_Down.cpp" />
+    <ClCompile Include="CEnemy_Bullet_Left.cpp" />
+    <ClCompile Include="CEnemy_Bullet_Right.cpp" />
+    <ClCompile Include="CEnemy_Bullet_Up.cpp" />
+    <ClCompile Include="CEnemy_Effect.cpp" />
+    <ClCompile Include="CExplosion.cpp" />
+    <ClCompile Include="CField.cpp" />
+    <ClCompile Include="CGame.cpp" />
+    <ClCompile Include="CGameCeiling.cpp" />
+    <ClCompile Include="CGameDoor.cpp" />
+    <ClCompile Include="CGameEnemy_001.cpp" />
+    <ClCompile Include="CGameEnemy_002.cpp" />
+    <ClCompile Include="CGamePoint.cpp" />
+    <ClCompile Include="CGameRobot.cpp" />
+    <ClCompile Include="CGameWall_001.cpp" />
+    <ClCompile Include="CGameWall_002.cpp" />
+    <ClCompile Include="CGlass.cpp" />
+    <ClCompile Include="CHpImage.cpp" />
+    <ClCompile Include="CHpScore.cpp" />
+    <ClCompile Include="CPowerImage.cpp" />
+    <ClCompile Include="CPowerMax.cpp" />
+    <ClCompile Include="CPowerPoly.cpp" />
+    <ClCompile Include="CRevolverModel.cpp" />
+    <ClCompile Include="CLight.cpp" />
+    <ClCompile Include="CLoadMap.cpp" />
+    <ClCompile Include="CModel.cpp" />
+    <ClCompile Include="CPlayer.cpp" />
+    <ClCompile Include="CPoint.cpp" />
+    <ClCompile Include="CResult.cpp" />
+    <ClCompile Include="CResultbg.cpp" />
+    <ClCompile Include="CRobot.cpp" />
+    <ClCompile Include="Cskillbg.cpp" />
+    <ClCompile Include="CSmoke.cpp" />
+    <ClCompile Include="CSpark.cpp" />
+    <ClCompile Include="CStart.cpp" />
+    <ClCompile Include="CTalkRobotImage.cpp" />
+    <ClCompile Include="CTextbubble.cpp" />
+    <ClCompile Include="CTime.cpp" />
+    <ClCompile Include="CTimeScore.cpp" />
+    <ClCompile Include="CTitle.cpp" />
+    <ClCompile Include="CTitleCamera.cpp" />
+    <ClCompile Include="CTitleImage.cpp" />
+    <ClCompile Include="CTitleLight.cpp" />
+    <ClCompile Include="CTitleMark.cpp" />
+    <ClCompile Include="CTitleMenu.cpp" />
+    <ClCompile Include="CTitleModel.cpp" />
+    <ClCompile Include="CTitleRobot.cpp" />
+    <ClCompile Include="CTitleSkyBox.cpp" />
+    <ClCompile Include="CTitle_R_Model.cpp" />
+    <ClCompile Include="CTrail.cpp" />
+    <ClCompile Include="CWall_001.cpp" />
+    <ClCompile Include="CWall_002.cpp" />
+    <ClCompile Include="cylinder.cpp" />
+    <ClCompile Include="debugProc.cpp" />
+    <ClCompile Include="fade.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="manager.cpp" />
+    <ClCompile Include="number.cpp" />
+    <ClCompile Include="portal.cpp" />
+    <ClCompile Include="renderer.cpp" />
+    <ClCompile Include="scene.cpp" />
+    <ClCompile Include="scene2D.cpp" />
+    <ClCompile Include="scene3D.cpp" />
+    <ClCompile Include="sceneBillboard.cpp" />
+    <ClCompile Include="sceneInput.cpp" />
+    <ClCompile Include="sceneMouse.cpp" />
+    <ClCompile Include="sceneX.cpp" />
+    <ClCompile Include="score.cpp" />
+    <ClCompile Include="SetMap.cpp" />
+    <ClCompile Include="skybox.cpp" />
+    <ClCompile Include="sound.cpp" />
+    <ClCompile Include="TransferEffect.cpp" />
+    <ClCompile Include="Unique_skill.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

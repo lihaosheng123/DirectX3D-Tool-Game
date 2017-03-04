@@ -1,0 +1,373 @@
+﻿  CBuildMenu.cpp
+  コードを生成中...
+  コンパイル中...
+  sound.cpp
+  skybox.cpp
+  score.cpp
+  sceneX.cpp
+  sceneMouse.cpp
+  sceneInput.cpp
+  sceneBillboard.cpp
+  scene3D.cpp
+  scene2D.cpp
+  scene.cpp
+  renderer.cpp
+  portal.cpp
+  number.cpp
+  manager.cpp
+  main.cpp
+  fade.cpp
+  debugProc.cpp
+  cylinder.cpp
+  bullet.cpp
+  Unique_skill.cpp
+  コードを生成中...
+  コンパイル中...
+  TransferEffect.cpp
+  SetMap.cpp
+  Cskillbg.cpp
+  Caxis.cpp
+  Camera.cpp
+  CWall_002.cpp
+d:\dxc++\directx9.17.02.24\directx9\cwall_002.cpp(204): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_002.cpp(205): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_002.cpp(206): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_002.cpp(222): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_002.cpp(223): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_002.cpp(224): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_002.cpp(243): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_002.cpp(244): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_002.cpp(245): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_002.cpp(265): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_002.cpp(266): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_002.cpp(267): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_002.cpp(287): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_002.cpp(288): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_002.cpp(289): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+  CWall_001.cpp
+d:\dxc++\directx9.17.02.24\directx9\cwall_001.cpp(204): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_001.cpp(205): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_001.cpp(206): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_001.cpp(223): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_001.cpp(224): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_001.cpp(225): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_001.cpp(243): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_001.cpp(244): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_001.cpp(245): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_001.cpp(265): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_001.cpp(266): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_001.cpp(267): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_001.cpp(287): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_001.cpp(288): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cwall_001.cpp(289): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+  CTrail.cpp
+d:\dxc++\directx9.17.02.24\directx9\ctrail.cpp(205): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\ctrail.cpp(206): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\ctrail.cpp(210): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\ctrail.cpp(211): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\ctrail.cpp(213): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+  CTitle_R_Model.cpp
+  CTitleSkyBox.cpp
+  CTitleRobot.cpp
+  CTitleModel.cpp
+  CTitleMenu.cpp
+  CTitleMark.cpp
+  CTitleLight.cpp
+  CTitleImage.cpp
+  CTitleCamera.cpp
+  CTitle.cpp
+d:\dxc++\directx9.17.02.24\directx9\ctitle.cpp(56): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+  CTimeScore.cpp
+  CTime.cpp
+  コードを生成中...
+  コンパイル中...
+  CTextbubble.cpp
+  CTalkRobotImage.cpp
+  CStart.cpp
+d:\dxc++\directx9.17.02.24\directx9\cstart.cpp(174): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cstart.cpp(175): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cstart.cpp(183): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cstart.cpp(184): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cstart.cpp(185): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+  CSpark.cpp
+  CSmoke.cpp
+  CRobot.cpp
+d:\dxc++\directx9.17.02.24\directx9\crobot.cpp(175): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\crobot.cpp(176): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\crobot.cpp(181): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\crobot.cpp(182): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\crobot.cpp(183): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\crobot.cpp(188): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\crobot.cpp(189): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\crobot.cpp(190): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\crobot.cpp(195): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\crobot.cpp(196): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\crobot.cpp(197): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\crobot.cpp(202): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\crobot.cpp(203): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\crobot.cpp(204): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+  CRevolverModel.cpp
+  CResultbg.cpp
+  CResult.cpp
+  CPowerPoly.cpp
+d:\dxc++\directx9.17.02.24\directx9\cpowerpoly.cpp(164): warning C4244: '引数': 'double' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cpowerpoly.cpp(166): warning C4244: '引数': 'double' から 'FLOAT' への変換です。データが失われる可能性があります。
+  CPowerMax.cpp
+  CPowerImage.cpp
+  CPoint.cpp
+d:\dxc++\directx9.17.02.24\directx9\cpoint.cpp(176): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cpoint.cpp(177): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cpoint.cpp(178): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cpoint.cpp(194): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cpoint.cpp(195): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cpoint.cpp(196): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+  CPlayer.cpp
+d:\dxc++\directx9.17.02.24\directx9\cplayer.cpp(434): warning C4244: '+=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cplayer.cpp(435): warning C4244: '+=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cplayer.cpp(440): warning C4244: '+=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cplayer.cpp(450): warning C4244: '+=': 'float' から 'int' への変換です。データが失われる可能性があります。
+  CModel.cpp
+  CLoadMap.cpp
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(170): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(171): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(172): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(209): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(210): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(211): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(238): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(239): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(240): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(277): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(278): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(279): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(300): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(301): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(302): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(344): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(345): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(346): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(372): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(373): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(374): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(416): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(417): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(418): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(448): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(449): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(450): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(478): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(479): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(480): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(532): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(533): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(534): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(576): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(577): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(578): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(618): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(619): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(620): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(657): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(658): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(659): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(683): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(684): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(685): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(722): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(723): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(724): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(779): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(780): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cloadmap.cpp(781): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+  CLight.cpp
+  CHpScore.cpp
+  CHpImage.cpp
+  CGlass.cpp
+  コードを生成中...
+  コンパイル中...
+  CGameWall_002.cpp
+  CGameWall_001.cpp
+  CGameRobot.cpp
+  CGamePoint.cpp
+  CGameEnemy_002.cpp
+  CGameEnemy_001.cpp
+  CGameDoor.cpp
+  CGameCeiling.cpp
+  CGame.cpp
+d:\dxc++\directx9.17.02.24\directx9\cgame.cpp(90): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
+  CField.cpp
+  CExplosion.cpp
+  CEnemy_Effect.cpp
+  CEnemy_Bullet_Up.cpp
+  CEnemy_Bullet_Right.cpp
+  CEnemy_Bullet_Left.cpp
+  CEnemy_Bullet_Down.cpp
+  CEnemy_002.cpp
+d:\dxc++\directx9.17.02.24\directx9\cenemy_002.cpp(177): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_002.cpp(178): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_002.cpp(179): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_002.cpp(192): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_002.cpp(193): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_002.cpp(194): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_002.cpp(199): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_002.cpp(200): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_002.cpp(201): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_002.cpp(206): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_002.cpp(207): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_002.cpp(208): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_002.cpp(213): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_002.cpp(214): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_002.cpp(215): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+  CEnemy_001.cpp
+d:\dxc++\directx9.17.02.24\directx9\cenemy_001.cpp(173): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_001.cpp(174): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_001.cpp(175): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_001.cpp(189): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_001.cpp(190): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_001.cpp(191): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_001.cpp(196): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_001.cpp(197): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_001.cpp(198): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_001.cpp(203): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_001.cpp(204): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_001.cpp(205): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_001.cpp(210): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_001.cpp(211): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cenemy_001.cpp(212): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+  CEnd.cpp
+d:\dxc++\directx9.17.02.24\directx9\cend.cpp(201): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cend.cpp(202): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cend.cpp(213): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cend.cpp(214): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cend.cpp(215): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+  CDoorEffect.cpp
+  コードを生成中...
+  コンパイル中...
+  CDoor.cpp
+d:\dxc++\directx9.17.02.24\directx9\cdoor.cpp(175): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cdoor.cpp(176): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cdoor.cpp(177): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cdoor.cpp(191): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cdoor.cpp(192): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cdoor.cpp(193): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cdoor.cpp(198): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cdoor.cpp(199): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cdoor.cpp(200): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cdoor.cpp(205): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cdoor.cpp(206): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cdoor.cpp(207): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cdoor.cpp(212): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cdoor.cpp(213): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cdoor.cpp(214): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+  CColumnar.cpp
+  CCeiling.cpp
+d:\dxc++\directx9.17.02.24\directx9\cceiling.cpp(205): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cceiling.cpp(206): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cceiling.cpp(207): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cceiling.cpp(226): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cceiling.cpp(227): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cceiling.cpp(228): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+  CBulletHoles.cpp
+  CBuildMenu_Wall.cpp
+  CBuildMenu_Prop.cpp
+  CBuildMenu_Enemy.cpp
+  CBuildMenu_Another.cpp
+  CBuildMap.cpp
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(395): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(439): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(466): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(495): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(524): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(567): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(614): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(644): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(674): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(702): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(750): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(780): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(810): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(838): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(889): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(921): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(953): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(983): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(1033): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(1065): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(1097): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(1127): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(1157): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(1157): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(1176): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(1176): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(1196): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(1196): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(1214): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(1214): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(1241): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(1241): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(1260): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(1260): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(1280): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(1280): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(1298): warning C4244: '引数': 'int' から 'FLOAT' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildmap.cpp(1298): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
+  CBuildManager.cpp
+  CBuildLoadMap.cpp
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(186): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(187): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(188): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(219): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(220): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(221): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(248): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(249): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(250): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(281): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(282): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(283): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(311): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(312): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(313): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(353): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(354): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(355): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(386): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(387): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(388): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(429): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(430): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(431): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(462): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(463): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(464): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(490): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(491): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(492): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(547): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(548): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(549): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(595): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(596): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(597): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(641): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(642): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(643): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(685): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(686): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(687): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(711): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(712): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(713): warning C4244: '=': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(749): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(750): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(751): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(809): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(810): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+d:\dxc++\directx9.17.02.24\directx9\cbuildloadmap.cpp(811): warning C4244: '=': 'int' から 'float' への変換です。データが失われる可能性があります。
+  CBuildLight.cpp
+  CBuildImage.cpp
+  CBuildCamera.cpp
+  BuildSetMap.cpp
+  コードを生成中...
+  DirectX9.vcxproj -> D:\DXC++\DirectX9.17.02.24\Debug\DirectX9.exe
+  DirectX9.vcxproj -> D:\DXC++\DirectX9.17.02.24\Debug\DirectX9.pdb (Partial PDB)

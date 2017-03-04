@@ -1,0 +1,648 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ソース ファイル">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="リソース ファイル">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\TITLE">
+      <UniqueIdentifier>{bd1bb69c-10d0-4d5f-b3b5-ed77bc27283b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\GAME">
+      <UniqueIdentifier>{8e22d264-967e-4246-b4ba-e9d21ac9007a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\BUILD">
+      <UniqueIdentifier>{8a6d879d-e3e9-4ffa-905d-8255f1dce42a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\TITLE">
+      <UniqueIdentifier>{9b870c81-c939-4789-b60b-bbd39a4645be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\BUILD">
+      <UniqueIdentifier>{8b811478-0d33-4642-83a9-43a4e560baca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\GAME">
+      <UniqueIdentifier>{59381de4-a83f-43ae-b23e-0a5f91cec809}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CField.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="CResult.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="CResultbg.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Cskillbg.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="CSmoke.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="CTime.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="CTimeScore.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="CTrail.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="CTransferEffect.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="cylinder.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="debugProc.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="fade.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="manager.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Mode.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="number.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="portal.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="renderer.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="scene.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="scene2D.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="scene3D.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneBillboard.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneInput.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneMouse.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneNumber.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneScore.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="sceneX.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="score.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="sound.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Unique_skill.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="CBuildCamera.h">
+      <Filter>ヘッダー ファイル\BUILD</Filter>
+    </ClInclude>
+    <ClInclude Include="CBuildLight.h">
+      <Filter>ヘッダー ファイル\BUILD</Filter>
+    </ClInclude>
+    <ClInclude Include="CBuildLoadMap.h">
+      <Filter>ヘッダー ファイル\BUILD</Filter>
+    </ClInclude>
+    <ClInclude Include="CBuildManager.h">
+      <Filter>ヘッダー ファイル\BUILD</Filter>
+    </ClInclude>
+    <ClInclude Include="CBuildMap.h">
+      <Filter>ヘッダー ファイル\BUILD</Filter>
+    </ClInclude>
+    <ClInclude Include="CBuildMenu.h">
+      <Filter>ヘッダー ファイル\BUILD</Filter>
+    </ClInclude>
+    <ClInclude Include="CBuildMenu_Enemy.h">
+      <Filter>ヘッダー ファイル\BUILD</Filter>
+    </ClInclude>
+    <ClInclude Include="CBuildMenu_Prop.h">
+      <Filter>ヘッダー ファイル\BUILD</Filter>
+    </ClInclude>
+    <ClInclude Include="CBuildMenu_Wall.h">
+      <Filter>ヘッダー ファイル\BUILD</Filter>
+    </ClInclude>
+    <ClInclude Include="CTitle.h">
+      <Filter>ヘッダー ファイル\TITLE</Filter>
+    </ClInclude>
+    <ClInclude Include="CTitleCamera.h">
+      <Filter>ヘッダー ファイル\TITLE</Filter>
+    </ClInclude>
+    <ClInclude Include="CTitleLight.h">
+      <Filter>ヘッダー ファイル\TITLE</Filter>
+    </ClInclude>
+    <ClInclude Include="CTitleMark.h">
+      <Filter>ヘッダー ファイル\TITLE</Filter>
+    </ClInclude>
+    <ClInclude Include="CTitleMenu.h">
+      <Filter>ヘッダー ファイル\TITLE</Filter>
+    </ClInclude>
+    <ClInclude Include="CEnemy_001.h">
+      <Filter>ヘッダー ファイル\BUILD</Filter>
+    </ClInclude>
+    <ClInclude Include="CEnemy_002.h">
+      <Filter>ヘッダー ファイル\BUILD</Filter>
+    </ClInclude>
+    <ClInclude Include="Caxis.h">
+      <Filter>ヘッダー ファイル\BUILD</Filter>
+    </ClInclude>
+    <ClInclude Include="CPoint.h">
+      <Filter>ヘッダー ファイル\BUILD</Filter>
+    </ClInclude>
+    <ClInclude Include="CWall_001.h">
+      <Filter>ヘッダー ファイル\BUILD</Filter>
+    </ClInclude>
+    <ClInclude Include="CWall_002.h">
+      <Filter>ヘッダー ファイル\BUILD</Filter>
+    </ClInclude>
+    <ClInclude Include="bullet.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CBulletHoles.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CEnemey_Bullet_Up.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CEnemy_Bullet_Down.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CEnemy_Bullet_Left.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CEnemy_Bullet_Right.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CEnemy_Effect.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CExplosion.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CGame.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameCeiling.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameCeiling_data.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameEnemy_001.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameEnemy_001_data.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameEnemy_002.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameEnemy_002_data.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameWall_001.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameWall_001_data.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameWall_002.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameWall_002_data.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CLight.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CLoadMap.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CModel.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayer.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="skybox.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CDoor.h">
+      <Filter>ヘッダー ファイル\BUILD</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameDoor_data.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameDoor.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CDoorEffect.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CCeiling.h">
+      <Filter>ヘッダー ファイル\BUILD</Filter>
+    </ClInclude>
+    <ClInclude Include="CColumnar.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CGamePoint_data.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CGlass.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CGamePoint.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CSpark.h">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="SetMap.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="BuildSetMap.h">
+      <Filter>ヘッダー ファイル\BUILD</Filter>
+    </ClInclude>
+    <ClInclude Include="CRevolverModel.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CTitleModel.h">
+      <Filter>ヘッダー ファイル\TITLE</Filter>
+    </ClInclude>
+    <ClInclude Include="CBuildMenu_Another.h">
+      <Filter>ヘッダー ファイル\BUILD</Filter>
+    </ClInclude>
+    <ClInclude Include="CStart.h">
+      <Filter>ヘッダー ファイル\BUILD</Filter>
+    </ClInclude>
+    <ClInclude Include="CEnd.h">
+      <Filter>ヘッダー ファイル\BUILD</Filter>
+    </ClInclude>
+    <ClInclude Include="CHpScore.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CHpImage.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CPowerImage.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CPowerPoly.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CPowerMax.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CTitleImage.h">
+      <Filter>ヘッダー ファイル\TITLE</Filter>
+    </ClInclude>
+    <ClInclude Include="CRobot.h">
+      <Filter>ヘッダー ファイル\BUILD</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameRobot.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CTalkRobotImage.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CTextbubble.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
+    <ClInclude Include="CTitle_R_Model.h">
+      <Filter>ヘッダー ファイル\TITLE</Filter>
+    </ClInclude>
+    <ClInclude Include="CTitleRobot.h">
+      <Filter>ヘッダー ファイル\TITLE</Filter>
+    </ClInclude>
+    <ClInclude Include="CBuildImage.h">
+      <Filter>ヘッダー ファイル\BUILD</Filter>
+    </ClInclude>
+    <ClInclude Include="CTitleSkyBox.h">
+      <Filter>ヘッダー ファイル\TITLE</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CField.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="CResult.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="CResultbg.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Cskillbg.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="CTime.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="CTimeScore.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="cylinder.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="debugProc.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="fade.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="manager.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="number.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="portal.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="renderer.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="scene.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="scene2D.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="scene3D.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="sceneBillboard.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="sceneInput.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="sceneMouse.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="sceneX.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="score.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="sound.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="TransferEffect.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="Unique_skill.cpp">
+      <Filter>ソース ファイル</Filter>
+    </ClCompile>
+    <ClCompile Include="CBuildCamera.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="CBuildLight.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="CBuildLoadMap.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="CBuildManager.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="CBuildMap.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="CBuildMenu.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="CBuildMenu_Enemy.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="CBuildMenu_Prop.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="CBuildMenu_Wall.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="CTitle.cpp">
+      <Filter>ソース ファイル\TITLE</Filter>
+    </ClCompile>
+    <ClCompile Include="CTitleCamera.cpp">
+      <Filter>ソース ファイル\TITLE</Filter>
+    </ClCompile>
+    <ClCompile Include="CTitleLight.cpp">
+      <Filter>ソース ファイル\TITLE</Filter>
+    </ClCompile>
+    <ClCompile Include="CTitleMark.cpp">
+      <Filter>ソース ファイル\TITLE</Filter>
+    </ClCompile>
+    <ClCompile Include="CTitleMenu.cpp">
+      <Filter>ソース ファイル\TITLE</Filter>
+    </ClCompile>
+    <ClCompile Include="CTrail.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="CWall_001.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="CWall_002.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="CEnemy_001.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="CEnemy_002.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="Caxis.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="CCeiling.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="CPoint.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="bullet.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CBulletHoles.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CEnemy_Bullet_Down.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CEnemy_Bullet_Left.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CEnemy_Bullet_Right.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CEnemy_Bullet_Up.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CEnemy_Effect.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CExplosion.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CGame.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameCeiling.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameEnemy_001.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameEnemy_002.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameWall_001.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameWall_002.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CLoadMap.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CLight.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CModel.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayer.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CSmoke.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="skybox.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CDoor.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameDoor.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CDoorEffect.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CColumnar.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CGamePoint.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CGlass.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CSpark.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="SetMap.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="BuildSetMap.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="CRevolverModel.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CTitleModel.cpp">
+      <Filter>ソース ファイル\TITLE</Filter>
+    </ClCompile>
+    <ClCompile Include="CBuildMenu_Another.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="CStart.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="CEnd.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="CHpScore.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CHpImage.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CPowerImage.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CPowerPoly.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CPowerMax.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CTitleImage.cpp">
+      <Filter>ソース ファイル\TITLE</Filter>
+    </ClCompile>
+    <ClCompile Include="CRobot.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameRobot.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CTalkRobotImage.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CTextbubble.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
+    </ClCompile>
+    <ClCompile Include="CTitle_R_Model.cpp">
+      <Filter>ソース ファイル\TITLE</Filter>
+    </ClCompile>
+    <ClCompile Include="CTitleRobot.cpp">
+      <Filter>ソース ファイル\TITLE</Filter>
+    </ClCompile>
+    <ClCompile Include="CBuildImage.cpp">
+      <Filter>ソース ファイル\BUILD</Filter>
+    </ClCompile>
+    <ClCompile Include="CTitleSkyBox.cpp">
+      <Filter>ソース ファイル\TITLE</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
