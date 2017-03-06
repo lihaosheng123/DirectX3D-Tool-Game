@@ -268,7 +268,7 @@ void CBuildMenu_Prop::Update(void)
 		}
 	}
 }
-
+//リスト構造の描画用
 CBuildMenu_Prop* CBuildMenu_Prop::Create(D3DXVECTOR3 pos, D3DXVECTOR3 rot, float height, float width, LPCSTR TEXTURE_FILE)
 {
 	CBuildMenu_Prop *m_BuildMenu_Prop;

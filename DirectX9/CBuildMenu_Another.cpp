@@ -2,7 +2,7 @@
 * ファイル名　CBuildMenu_Another.cpp
 * 作成者 AT13B284 42 李昊盛
 * 作成日 2016/12/17
-2Dポリゴンの描画用
+//*anotherのmenu
 ********************************************************************************/
 #include "main.h"
 #include "manager.h"
@@ -10,8 +10,6 @@
 #include "scene.h"
 #include "scene2D.h"
 #include "CBuildMenu_Another.h"
-
-//グローバル変数
 
 //=============================================================================
 // クラスコンストラクタ
@@ -23,8 +21,7 @@ CBuildMenu_Another::CBuildMenu_Another()
 		m_pTexture_Build_Another[i] = NULL;
 		m_pVtxBuffer_Build_Another[i] = NULL;	//頂点パッファへのポインタ
 	}
-	m_bUse = false;
-
+	m_bUse = false;		//初期化描画しない
 }
 //=============================================================================
 // クラスデストラクタ
@@ -35,7 +32,7 @@ CBuildMenu_Another::~CBuildMenu_Another()
 }
 //=============================================================================
 //  関数名　：Init
-//  機能概要：プリゴンの初期化
+//  機能概要：BuildMenu_Anotherの初期化
 //  戻り値　：HRESULT
 //=============================================================================
 HRESULT CBuildMenu_Another::Init(D3DXVECTOR3 pos, D3DXVECTOR3 rot, float height, float width, LPCSTR TEXTURE_FILE)
@@ -57,12 +54,12 @@ HRESULT CBuildMenu_Another::Init(D3DXVECTOR3 pos, D3DXVECTOR3 rot, float height,
 		"data\\TEXTURE\\start.png",		// ファイルの名前
 		&m_pTexture_Build_Another[0]);	// 読み込むメモリ
 
-									// テクスチャの読み込み
+	// テクスチャの読み込み
 	D3DXCreateTextureFromFile(device,				// デバイスへのポインタ
 		"data\\TEXTURE\\end.png",		// ファイルの名前
 		&m_pTexture_Build_Another[1]);	// 読み込むメモリ
 
-										// テクスチャの読み込み
+	// テクスチャの読み込み
 	D3DXCreateTextureFromFile(device,				// デバイスへのポインタ
 		"data\\TEXTURE\\present.png",		// ファイルの名前
 		&m_pTexture_Build_Another[2]);	// 読み込むメモリ
@@ -96,9 +93,9 @@ HRESULT CBuildMenu_Another::Init(D3DXVECTOR3 pos, D3DXVECTOR3 rot, float height,
 
 			// rhwの設定
 			pVtx[0].rhw =
-				pVtx[1].rhw =
-				pVtx[2].rhw =
-				pVtx[3].rhw = 1.0f;
+			pVtx[1].rhw =
+			pVtx[2].rhw =
+			pVtx[3].rhw = 1.0f;
 
 			// 頂点カラーの設定
 			pVtx[0].col = D3DCOLOR_RGBA(255, 255, 255, 255);
@@ -116,6 +113,7 @@ HRESULT CBuildMenu_Another::Init(D3DXVECTOR3 pos, D3DXVECTOR3 rot, float height,
 		// 頂点データをアンロックする
 		m_pVtxBuffer_Build_Another[i]->Unlock();
 	}
+	//状態の初期化
 	m_type = BUILD_MENU_ANOTHER_00;
 	return S_OK;
 }
@@ -126,6 +124,7 @@ HRESULT CBuildMenu_Another::Init(D3DXVECTOR3 pos, D3DXVECTOR3 rot, float height,
 //=============================================================================
 void CBuildMenu_Another::Uninit(void)
 {
+	//削除
 	for (int i = 0; i < MENU_ANOTHER_NUM; i++)
 	{
 		RELEASE(m_pTexture_Build_Another[i]);
@@ -139,6 +138,7 @@ void CBuildMenu_Another::Uninit(void)
 //=============================================================================
 void CBuildMenu_Another::Draw(void)
 {
+	//使用中
 	if (m_bUse == true)
 	{
 		CManager *manager = GetManager();
@@ -184,17 +184,19 @@ void CBuildMenu_Another::Update(void)
 	CBuildManager *BuildManager = (CBuildManager*)CManager::GetMode();
 	CSceneInput *m_Input = manager->GetInput();
 	CBuildMenu *m_BuildMenu = BuildManager->GetBuildMenu();
-
+	//使用中
 	if (m_bUse == true)
 	{
 		switch (m_type)
 		{
 		case BUILD_MENU_ANOTHER_00:
+			//右ボタン押す
 			if (m_Input->GetKeyboardTrigger(DIK_RIGHT))
 			{
 				m_type = BUILD_MENU_ANOTHER_START;
 			}
 			break;
+			//Anotherのstartのメニュー
 		case BUILD_MENU_ANOTHER_START:
 			//頂点バッファの中身を埋める
 			VERTEX_2D *pVtx;
@@ -225,7 +227,7 @@ void CBuildMenu_Another::Update(void)
 			// 頂点データの範囲をロックし、頂点バッファへのポインタを取得
 			m_pVtxBuffer_Build_Another[2]->Lock(0, 0, (void**)&pVtx, 0);
 
-			// 頂点カラーの設定
+			// 頂点カラーの設定（色替る）
 			pVtx[0].col = D3DCOLOR_RGBA(255, 255, 255, 255);
 			pVtx[1].col = D3DCOLOR_RGBA(255, 255, 255, 255);
 			pVtx[2].col = D3DCOLOR_RGBA(255, 255, 255, 255);
@@ -236,6 +238,7 @@ void CBuildMenu_Another::Update(void)
 
 			if (m_Input->GetKeyboardTrigger(DIK_LEFT))
 			{
+				//使用しない
 				m_bUse = false;
 				m_type = BUILD_MENU_ANOTHER_00;
 				m_BuildMenu->m_type = m_BuildMenu->BUILD_MENU_ANOTHER;
@@ -243,16 +246,17 @@ void CBuildMenu_Another::Update(void)
 
 			if (m_Input->GetKeyboardTrigger(DIK_RIGHT))
 			{
+				//次のAnotherメニュー
 				m_type = BUILD_MENU_ANOTHER_END;
 			}
 
 			break;
-
+			//Anotherのendメニュー
 		case BUILD_MENU_ANOTHER_END:
 			// 頂点データの範囲をロックし、頂点バッファへのポインタを取得
 			m_pVtxBuffer_Build_Another[1]->Lock(0, 0, (void**)&pVtx, 0);
 
-			// 頂点カラーの設定
+			// 頂点カラーの設定（色替る）
 			pVtx[0].col = D3DCOLOR_RGBA(100, 255, 255, 255);
 			pVtx[1].col = D3DCOLOR_RGBA(100, 255, 255, 255);
 			pVtx[2].col = D3DCOLOR_RGBA(100, 255, 255, 255);
@@ -296,7 +300,7 @@ void CBuildMenu_Another::Update(void)
 			}
 			break;
 
-
+		//AnotherのPresentメニュー
 		case BUILD_MENU_ANOTHER_PRESENT:
 			// 頂点データの範囲をロックし、頂点バッファへのポインタを取得
 			m_pVtxBuffer_Build_Another[2]->Lock(0, 0, (void**)&pVtx, 0);
@@ -342,11 +346,10 @@ void CBuildMenu_Another::Update(void)
 
 		default:
 			break;
-
 		}
 	}
 }
-
+//リスト構造の描画用
 CBuildMenu_Another* CBuildMenu_Another::Create(D3DXVECTOR3 pos, D3DXVECTOR3 rot, float height, float width, LPCSTR TEXTURE_FILE)
 {
 	CBuildMenu_Another *m_BuildMenu_Another;

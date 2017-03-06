@@ -117,9 +117,9 @@ HRESULT CBuildMenu::Init(D3DXVECTOR3 pos, D3DXVECTOR3 rot, float height, float w
 
 			// rhwの設定
 			pVtx[0].rhw =
-				pVtx[1].rhw =
-				pVtx[2].rhw =
-				pVtx[3].rhw = 1.0f;
+			pVtx[1].rhw =
+			pVtx[2].rhw =
+			pVtx[3].rhw = 1.0f;
 
 			// 頂点カラーの設定
 			pVtx[0].col = D3DCOLOR_RGBA(255, 255, 255, 255);
@@ -1177,7 +1177,7 @@ void CBuildMenu::Update(void)
 	}
 
 }
-
+//リスト構造の描画用
 CBuildMenu* CBuildMenu::Create(D3DXVECTOR3 pos, D3DXVECTOR3 rot, float height, float width, LPCSTR TEXTURE_FILE)
 {
 	CBuildMenu *m_BuildMenu;
