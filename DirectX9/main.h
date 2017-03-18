@@ -1,44 +1,57 @@
-/********************************************************************************
-* ƒ^ƒCƒgƒ‹@01
-* ƒtƒ@ƒCƒ‹–¼ main.h
-* ì¬Ò AT13B284 42 —›İ·
-* ì¬“ú 2016/04/18
+ï»¿/********************************************************************************
+* ã‚¿ã‚¤ãƒˆãƒ«ã€€01
+* ãƒ•ã‚¡ã‚¤ãƒ«å main.h
+* ä½œæˆè€… AT13B284 42 ææ˜Šç››
+* ä½œæˆæ—¥ 2016/04/18
 *
 ********************************************************************************/
 #ifndef _MAIN_H_
 #define _MAIN_H_
-//ƒCƒ“ƒNƒ‹[ƒhƒtƒ@ƒCƒ‹
+//ã‚¤ãƒ³ã‚¯ãƒ«ãƒ¼ãƒ‰ãƒ•ã‚¡ã‚¤ãƒ«
 #define  DIRECTINPUT_VERSION ( 0x0800 )
 #include <windows.h>
 #include "resource.h"
-#include "d3dx9.h"	//•`‰æˆ—‚É•K—v
-#include "dinput.h"		//“ü—Íˆ—‚É•K—v
-#include "xaudio2.h"		// XAudio2ŠÖ˜A‚Ìƒwƒbƒ_[
+#include "d3dx9.h"	//æç”»å‡¦ç†ã«å¿…è¦
+#include "dinput.h"		//å…¥åŠ›å‡¦ç†ã«å¿…è¦
+#include "xaudio2.h"		// XAudio2é–¢é€£ã®ãƒ˜ãƒƒãƒ€ãƒ¼
 #include "manager.h"
-//#pragmaƒfƒBƒŒƒBƒfƒBƒu’Ç‰Áiƒ‰ƒCƒuƒ‰ƒŠ‚ÌƒŠƒ“ƒNj
-#pragma comment(lib,"d3d9.lib")		//•`‰æˆ—‚É•K—v
-#pragma comment(lib,"d3dx9.lib")	//ã‹L‚ÌŠg’£‚¤ƒCƒuƒEƒŠ
-#pragma comment(lib,"dxguid.lib")	//DirectXƒRƒ“ƒ{\ƒlƒ“ƒgg—p‚É•K—v
+//#pragmaãƒ‡ã‚£ãƒ¬ã‚£ãƒ‡ã‚£ãƒ–è¿½åŠ ï¼ˆãƒ©ã‚¤ãƒ–ãƒ©ãƒªã®ãƒªãƒ³ã‚¯ï¼‰
+#pragma comment(lib,"d3d9.lib")		//æç”»å‡¦ç†ã«å¿…è¦
+#pragma comment(lib,"d3dx9.lib")	//ä¸Šè¨˜ã®æ‹¡å¼µã†ã‚¤ãƒ–ã‚¦ãƒª
+#pragma comment(lib,"dxguid.lib")	//DirectXã‚³ãƒ³ãƒœâ€•ãƒãƒ³ãƒˆä½¿ç”¨ã«å¿…è¦
 #pragma comment(lib,"winmm.lib")
-#pragma comment ( lib, "dinput8.lib" )		//“ü—Íˆ—‚É•K—v
+#pragma comment ( lib, "dinput8.lib" )		//å…¥åŠ›å‡¦ç†ã«å¿…è¦
 #pragma warning ( disable: 4996 )			//
-//ƒ}ƒNƒ’è‹`
+//ãƒã‚¯ãƒ­å®šç¾©
 #define SCREEN_WIDTH (1280)
 #define SCREEN_HEIGHT (720)
-#define SCREEN_CENTER_X	( SCREEN_WIDTH / 2 )		//ƒEƒCƒ“ƒhƒE‚Ì’†S‚wÀ•W
-#define SCREEN_CENTER_Y	( SCREEN_HEIGHT / 2 )		//ƒEƒCƒ“ƒhƒE‚Ì’†S‚xÀ•W
-#define FVF_VERTEX_2D (D3DFVF_XYZRHW|D3DFVF_DIFFUSE|D3DFVF_TEX1)	//ƒeƒNƒXƒ`ƒƒÀ•W
-#define FVF_VERTEX_3D	( D3DFVF_XYZ | D3DFVF_NORMAL | D3DFVF_DIFFUSE | D3DFVF_TEX1 )	//’¸“_À•W(3d) | –@ü | ’¸“_ƒJƒ‰[ | ƒeƒNƒXƒ`ƒƒÀ•W
+#define SCREEN_CENTER_X	( SCREEN_WIDTH / 2 )		//ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã®ä¸­å¿ƒï¼¸åº§æ¨™
+#define SCREEN_CENTER_Y	( SCREEN_HEIGHT / 2 )		//ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã®ä¸­å¿ƒï¼¹åº§æ¨™
+#define FVF_VERTEX_2D (D3DFVF_XYZRHW|D3DFVF_DIFFUSE|D3DFVF_TEX1)	//ãƒ†ã‚¯ã‚¹ãƒãƒ£åº§æ¨™
+#define FVF_VERTEX_3D	( D3DFVF_XYZ | D3DFVF_NORMAL | D3DFVF_DIFFUSE | D3DFVF_TEX1 )	//é ‚ç‚¹åº§æ¨™(3d) | æ³•ç·š | é ‚ç‚¹ã‚«ãƒ©ãƒ¼ | ãƒ†ã‚¯ã‚¹ãƒãƒ£åº§æ¨™
 
 
-//ƒ}ƒNƒŠJ•ú
+//ãƒã‚¯ãƒ­é–‹æ”¾
 #define RELEASE( d )	if( d != NULL )					\
 						{								\
 							( d ) -> Release();			\
 							d = NULL;					\
 						}
+
+#define HR(x)    { hr = x; if( FAILED(hr) ) { return hr; } }         //è‡ªå®šä¹‰ä¸€ä¸ªHRå®ï¼Œæ–¹ä¾¿æ‰§è¡Œä»£ç‰¦çš„è¿”å›
+
+
+
+#define SAFE_DELETE(p)       { if(p) { delete (p);     (p)=NULL; } }       //è‡ªå®šä¹‰ä¸€ä¸ªSAFE_RELEASE()
+
+
+
+#define SAFE_RELEASE(p)      { if(p) { (p)->Release(); (p)=NULL; } }     //è‡ªå®šä¹‰ä¸€ä¸ªSAFE_RELEASE()ä¾¿äºCOMèµ„æºçš„é‡Šæ”¾
+
+#define SAFE_DELETE_ARRAY(p) { if(p) { delete[] (p);   (p)=NULL; } }
+
 class CManager;
 class CGmae;
-class CRenderer;		//‘O•ûéŒ¾
+class CRenderer;		//å‰æ–¹å®£è¨€
 CManager *GetManager ( void );
 #endif

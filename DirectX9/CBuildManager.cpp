@@ -1,147 +1,153 @@
-/********************************************************************************
-* ƒ^ƒCƒgƒ‹@CBUILDMANAGER
-* ƒtƒ@ƒCƒ‹–¼@CBuildManager.cpp
-* ì¬Ò AT13B284 42 —›İ·
-* ì¬“ú 2016/12/19
-*Build‚Ìƒ}ƒlƒWƒƒ[
+ï»¿/********************************************************************************
+* ã‚¿ã‚¤ãƒˆãƒ«ã€€CBUILDMANAGER
+* ãƒ•ã‚¡ã‚¤ãƒ«åã€€CBuildManager.cpp
+* ä½œæˆè€… AT13B284 42 ææ˜Šç››
+* ä½œæˆæ—¥ 2016/12/19
+*Buildã®ãƒãƒã‚¸ãƒ£ãƒ¼
 ********************************************************************************/
 #include "CBuildManager.h"
 //------------------------------------------------------------------------------
-//	ŠÖ”–¼:	CBuildManager::CBuildManager
-//	ˆø”:	‚È‚µ
-//	–ß‚è’l:	‚È‚µ
-//	à–¾:	ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+//	é–¢æ•°å:	CBuildManager::CBuildManager
+//	å¼•æ•°:	ãªã—
+//	æˆ»ã‚Šå€¤:	ãªã—
+//	èª¬æ˜:	ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 //------------------------------------------------------------------------------
 CBuildManager::CBuildManager()
 {
 	CManager *manager = GetManager();
-	//Buildƒ‚[ƒhƒIƒ“
+	//Buildãƒ¢ãƒ¼ãƒ‰ã‚ªãƒ³
 	manager->m_Build = true;
-	//ƒ}ƒEƒX•`‰æƒIƒ“
+	//ãƒã‚¦ã‚¹æç”»ã‚ªãƒ³
 	manager->m_MouseDraw = true;
 }
 
 //------------------------------------------------------------------------------
-//	ŠÖ”–¼:	CBuildManager::~CBuildManager
-//	ˆø”:	‚È‚µ
-//	–ß‚è’l:	CBuildManager
-//	à–¾:	ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+//	é–¢æ•°å:	CBuildManager::~CBuildManager
+//	å¼•æ•°:	ãªã—
+//	æˆ»ã‚Šå€¤:	CBuildManager
+//	èª¬æ˜:	ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 //------------------------------------------------------------------------------
 CBuildManager::~CBuildManager()
 {
 }
 
 //------------------------------------------------------------------------------
-//	ŠÖ”–¼:	void CBuildManager::Init
-//	ˆø”:	‚È‚µ
-//	–ß‚è’l:	‚È‚µ
-//	à–¾:	‰Šú‰»ˆ—
+//	é–¢æ•°å:	void CBuildManager::Init
+//	å¼•æ•°:	ãªã—
+//	æˆ»ã‚Šå€¤:	ãªã—
+//	èª¬æ˜:	åˆæœŸåŒ–å‡¦ç†
 //------------------------------------------------------------------------------
 void CBuildManager::Init(void)
 {
-	//ƒ‰ƒCƒgƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚Æ‰Šú‰»
+	CManager *manager = GetManager();
+	CRenderer *renderer = manager->GetRenderer();
+	LPDIRECT3DDEVICE9 device = renderer->GetDevice();
+	//ãƒ©ã‚¤ãƒˆã‚¯ãƒ©ã‚¹ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã¨åˆæœŸåŒ–
 	m_Light = new CBuildLight;
 	m_Light->Init(D3DXVECTOR3(0.0f, 0.0f, 0.0f));
 
-	//ƒJƒƒ‰ƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚Æ‰Šú‰»
+	//ã‚«ãƒ¡ãƒ©ã‚¯ãƒ©ã‚¹ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã¨åˆæœŸåŒ–
 	m_BuildCamera = new CBuildCamera;
 	m_BuildCamera->Init();
 
-	//ƒ}ƒbƒv‚Ì“Ç‚İ‚İƒNƒ‰ƒX‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚Æ‰Šú‰»
+	//ãƒãƒƒãƒ—ã®èª­ã¿è¾¼ã¿ã‚¯ãƒ©ã‚¹ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã¨åˆæœŸåŒ–
 	m_BuildLoadMap = new CBuildLoadMap;
 	m_BuildLoadMap->Init();
-	/*ƒŠƒXƒg\‘¢•`‰æŠJn*/
-	//“Vˆä”Â•`‰æ—p
+	/*ãƒªã‚¹ãƒˆæ§‹é€ æç”»é–‹å§‹*/
+	//å¤©äº•æ¿æç”»ç”¨
 	m_GameCeiling = CGameCeiling::Create(D3DXVECTOR3(0.0f, 7000.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 200.0f, 200.0f, TEXTURE_CEILING_FILE);
-	//•Ç001•`‰æ—p
+	//å£001æç”»ç”¨
 	m_GameWall_001 = CGameWall_001::Create(D3DXVECTOR3(0.0f, 0.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 200.0f, 200.0f, GAME_TEXTURE_WALL_001_FILE);
-	//•Ç002•`‰æ—p
+	//å£002æç”»ç”¨
 	m_GameWall_002 = CGameWall_002::Create(D3DXVECTOR3(0.0f, 0.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 200.0f, 200.0f, GAME_TEXTURE_WALL_002_FILE);
-	//“G001•`‰æ—p
+	//æ•µ001æç”»ç”¨
 	m_GameEnemy_001 = CGameEnemy_001::Create(D3DXVECTOR3(0.0f, 0.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 0.0f, 0.0f, MODEL_ENEMY_001);
-	//“G002•`‰æ—p
+	//æ•µ002æç”»ç”¨
 	m_GameEnemy_002 = CGameEnemy_002::Create(D3DXVECTOR3(0.0f, 0.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 0.0f, 0.0f, MODEL_ENEMY_002);
-	//ƒhƒAƒ‚ƒfƒ‹•`‰æ—p
+	//ãƒ‰ã‚¢ãƒ¢ãƒ‡ãƒ«æç”»ç”¨
 	m_GameDoor = CGameDoor::Create(D3DXVECTOR3(0.0f, 0.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 0.0f, 0.0f, MODEL_DOOR);
-	//ğŒƒ‚ƒfƒ‹•`‰æ—p
+	//æ¡ä»¶ãƒ¢ãƒ‡ãƒ«æç”»ç”¨
 	m_GamePoint = CGamePoint::Create(D3DXVECTOR3(0.0f, 0.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 0.0f, 0.0f, MODEL_POINT);
-	//ƒtƒB[ƒ‹ƒh•`‰æ—p
+	//ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰æç”»ç”¨
 	m_Field = CField::Create(D3DXVECTOR3(0.0f, 0.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 100.0f, 100.0f, MESHFIELD_TEXTURE_FILE00);
-	//À•WŒn•`‰æ—p
+	//åº§æ¨™ç³»æç”»ç”¨
 	m_axis = Caxis::Create(D3DXVECTOR3(0.0f, 1.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 7000.0f, 7000.0f, TEXTURE_AXIS_FILE);
-	//2DMEnu(main)•`‰æ—p
+	//2DMEnu(main)æç”»ç”¨
 	m_BuildMenu = CBuildMenu::Create(D3DXVECTOR3(50.0f, 50.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 60.0f, 90.0f, "NULL");
-	//2DMEnu(wall)•`‰æ—p
+	//2DMEnu(wall)æç”»ç”¨
 	m_BuildMenu_Wall = CBuildMenu_Wall::Create(D3DXVECTOR3(130.0f, 50.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 50.0f, 50.0f, "NULL");
-	//2DMEnu(enemy)•`‰æ—p
+	//2DMEnu(enemy)æç”»ç”¨
 	m_BuildMenu_Enemy = CBuildMenu_Enemy::Create(D3DXVECTOR3(130.0f, 130.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 60.0f, 60.0f, "NULL");
-	//2DMEnu(prop)•`‰æ—p
+	//2DMEnu(prop)æç”»ç”¨
 	m_BuildMenu_Prop  = CBuildMenu_Prop::Create(D3DXVECTOR3(150.0f, 370.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 60.0f, 100.0f, "NULL");
-	//2DMEnu(another)•`‰æ—p
+	//2DMEnu(another)æç”»ç”¨
 	m_BuildMenu_Another = CBuildMenu_Another::Create(D3DXVECTOR3(150.0f, 450.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 60.0f, 100.0f, "NULL");
-	//Build—p(wall001)•`‰æ—p
+	//Buildç”¨(wall001)æç”»ç”¨
 	m_Wall_001[0] = CWall_001::Create(D3DXVECTOR3(0.0f, 7000.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 200.0f, 200.0f, TEXTURE_WALL_001_FILE);
-	//Build—p(wall002)•`‰æ—p
+	//Buildç”¨(wall002)æç”»ç”¨
 	m_Wall_002[0] = CWall_002::Create(D3DXVECTOR3(0.0f, 7000.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 200.0f, 200.0f, TEXTURE_WALL_002_FILE);
-	//Build—p(enemy001)•`‰æ—p
+	//Buildç”¨(enemy001)æç”»ç”¨
 	m_Enemy_001[0] = CEnemy_001::Create(D3DXVECTOR3(0.0f, 7000.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 0.0f, 0.0f, MODEL_ENEMY_001);
-	//Build—p(enemy002)•`‰æ—p
+	//Buildç”¨(enemy002)æç”»ç”¨
 	m_Enemy_002[0] = CEnemy_002::Create(D3DXVECTOR3(0.0f, 7000.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 0.0f, 0.0f, MODEL_ENEMY_002);
-	//Build—p(ceiling(“Vˆä”Â))•`‰æ—p
+	//Buildç”¨(ceiling(å¤©äº•æ¿))æç”»ç”¨
 	m_Ceiling[0] = CCeiling::Create(D3DXVECTOR3(0.0f, 7000.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 200.0f, 200.0f, TEXTURE_CEILING_FILE);
-	//Build—p(Trail(“G‚Ì‹OÕ))•`‰æ—p
+	//Buildç”¨(Trail(æ•µã®è»Œè·¡))æç”»ç”¨
 	m_Trail = CTrail::Create(D3DXVECTOR3(0.0f, 7000.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 70.0f, 30.0f, TEXTURE_TRAIL_FILE);
-	//Build—p(door)•`‰æ—p
+	//Buildç”¨(door)æç”»ç”¨
 	m_Door = CDoor::Create(D3DXVECTOR3(0.0f, 5000.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 0.0f, 0.0f, MODEL_DOOR);
-	//Build—p(point)•`‰æ—p
+	//Buildç”¨(point)æç”»ç”¨
 	m_Point = CPoint::Create(D3DXVECTOR3(0.0f, 0.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 0.0f, 0.0f, MODEL_POINT);
-	//Build—p(start)•`‰æ—p
+	//Buildç”¨(start)æç”»ç”¨
 	m_Start = CStart::Create(D3DXVECTOR3(0.0f, 0.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 0.0f, 0.0f, MODEL_START);
-	//Build—p(end)•`‰æ—p
+	//Buildç”¨(end)æç”»ç”¨
 	m_End = CEnd::Create(D3DXVECTOR3(0.0f, 7000.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 200.0f, 200.0f, "NULL");
-	//Build—p(robot)•`‰æ—p
+	//Buildç”¨(robot)æç”»ç”¨
 	m_Robot = CRobot::Create(D3DXVECTOR3(0.0f, 7000.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 0.0f, 0.0f, MODEL_ROBOT);
-	//Build—p(BuildImage)•`‰æ—p
+	//Buildç”¨(BuildImage)æç”»ç”¨
 	m_BuildImage = CBuildImage::Create(D3DXVECTOR3(1120.0f, 60.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 120.0f, 300.0f, TEXTURE_BUILDIMAGE_FILE);
-	/*ƒŠƒXƒg\‘¢•`‰æI—¹*/
-	//‘¶İ‚·‚é‚Ìƒf[ƒ^“ü—Í‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚Æ‰Šú‰»
+	/*ãƒªã‚¹ãƒˆæ§‹é€ æç”»çµ‚äº†*/
+	//å­˜åœ¨ã™ã‚‹ã®ãƒ‡ãƒ¼ã‚¿å…¥åŠ›ã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã¨åˆæœŸåŒ–
 	m_BuildSetMap = new BuildSetMap;
 	m_BuildSetMap->Init();
 
-	//ƒ}ƒbƒN‚Ìì¬‚Æ“ü—ÍƒCƒ“ƒXƒ^ƒ“ƒX‚Æ‰Šú‰»
+	//ãƒãƒƒã‚¯ã®ä½œæˆã¨å…¥åŠ›ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã¨åˆæœŸåŒ–
 	m_BuildMap = new CBuildMap;
 	m_BuildMap->Init();
 
+	g_pAllocateHier = new CAllocateHierarchy();
+	D3DXLoadMeshHierarchyFromX("lxq.x", D3DXMESH_MANAGED, device, g_pAllocateHier, NULL, &g_pFrameRoot, &g_pAnimController);
+	SetupBoneMatrixPointers(g_pFrameRoot, g_pFrameRoot);
 
 }
 
 //------------------------------------------------------------------------------
-//	ŠÖ”–¼:	void CBuildManager::Uninit
-//	ˆø”:	‚È‚µ
-//	–ß‚è’l:	‚È‚µ
-//	à–¾:	I—¹ˆ—
+//	é–¢æ•°å:	void CBuildManager::Uninit
+//	å¼•æ•°:	ãªã—
+//	æˆ»ã‚Šå€¤:	ãªã—
+//	èª¬æ˜:	çµ‚äº†å‡¦ç†
 //------------------------------------------------------------------------------
 void CBuildManager::Uninit(void)
 {
-	//ƒJƒƒ‰ƒNƒ‰ƒX‚Ìíœ
+	//ã‚«ãƒ¡ãƒ©ã‚¯ãƒ©ã‚¹ã®å‰Šé™¤
 	m_BuildCamera->Uninit();
 	delete m_BuildCamera;
 
-	//ƒ‰ƒCƒgƒNƒ‰ƒX‚Ìíœ
+	//ãƒ©ã‚¤ãƒˆã‚¯ãƒ©ã‚¹ã®å‰Šé™¤
 	delete m_Light;
 
-	//ƒ}ƒbƒN‚Ìì¬‚Æ“ü—ÍƒNƒ‰ƒX‚Ìíœ
+	//ãƒãƒƒã‚¯ã®ä½œæˆã¨å…¥åŠ›ã‚¯ãƒ©ã‚¹ã®å‰Šé™¤
 	m_BuildMap->Uninit();
 	delete m_BuildMap;
 
-	//ƒ}ƒbƒv‚Ì“Ç‚İ‚İƒNƒ‰ƒX‚Ìíœ
+	//ãƒãƒƒãƒ—ã®èª­ã¿è¾¼ã¿ã‚¯ãƒ©ã‚¹ã®å‰Šé™¤
 	m_BuildLoadMap->Uninit();
 	delete m_BuildLoadMap;
 
-	//‘¶İ‚·‚é‚Ìƒf[ƒ^“ü—ÍƒNƒ‰ƒX‚Ìíœ
+	//å­˜åœ¨ã™ã‚‹ã®ãƒ‡ãƒ¼ã‚¿å…¥åŠ›ã‚¯ãƒ©ã‚¹ã®å‰Šé™¤
 	delete m_BuildSetMap;
 
-	/*ƒŠƒXƒg\‘¢‚Ìíœ*/
+	/*ãƒªã‚¹ãƒˆæ§‹é€ ã®å‰Šé™¤*/
 	CScene::UninitAll();
 
 
@@ -149,44 +155,60 @@ void CBuildManager::Uninit(void)
 }
 
 //------------------------------------------------------------------------------
-//	ŠÖ”–¼:	void CBuildManager::Update
-//	ˆø”:	‚È‚µ
-//	–ß‚è’l:	‚È‚µ
-//	à–¾:	XVˆ—
+//	é–¢æ•°å:	void CBuildManager::Update
+//	å¼•æ•°:	ãªã—
+//	æˆ»ã‚Šå€¤:	ãªã—
+//	èª¬æ˜:	æ›´æ–°å‡¦ç†
 
 //------------------------------------------------------------------------------
 void CBuildManager::Update(void)
 {
 	CManager *manager = GetManager();
+	CRenderer *renderer = manager->GetRenderer();
+	LPDIRECT3DDEVICE9 device = renderer->GetDevice();
 	CSceneInput *m_Input = manager->GetInput();
 
-	//ƒ‰ƒCƒgƒNƒ‰ƒX‚ÌXV
+	//ãƒ©ã‚¤ãƒˆã‚¯ãƒ©ã‚¹ã®æ›´æ–°
 	m_Light->Update();
 
-	//ƒJƒƒ‰ƒNƒ‰ƒX‚ÌXV
+	//ã‚«ãƒ¡ãƒ©ã‚¯ãƒ©ã‚¹ã®æ›´æ–°
 	m_BuildCamera->Update();
 
-	//ƒ}ƒbƒv‚Ì“Ç‚İ‚İƒNƒ‰ƒX‚ÌXV
+	//ãƒãƒƒãƒ—ã®èª­ã¿è¾¼ã¿ã‚¯ãƒ©ã‚¹ã®æ›´æ–°
 	m_BuildLoadMap->Update();
 
-	/*ƒŠƒXƒg\‘¢‚ÌXV*/
+	/*ãƒªã‚¹ãƒˆæ§‹é€ ã®æ›´æ–°*/
 	CScene::UpdateAll();
 
-	//ƒ}ƒbƒN‚Ìì¬‚Æ“ü—ÍƒNƒ‰ƒX‚ÌXV
+	//ãƒãƒƒã‚¯ã®ä½œæˆã¨å…¥åŠ›ã‚¯ãƒ©ã‚¹ã®æ›´æ–°
 	m_BuildMap->Update(hInstance,hWnd);
+
+	// è®¾ç½®éª¨éª¼åŠ¨ç”»çš„çŸ©é˜µ  
+	D3DXMATRIX matFinal, matScal;
+	D3DXMatrixIdentity(&matFinal);
+	D3DXMatrixScaling(&matScal, 5.0f, 9.0f, 5.0f);
+	matFinal = matScal *matFinal;
+	device->SetTransform(D3DTS_WORLD, &matFinal);
+
+	// æ›´æ–°éª¨éª¼åŠ¨ç”»  
+	g_pAnimController->AdvanceTime(30.0f/1000.0f, NULL);  //è®¾ç½®éª¨éª¼åŠ¨ç”»çš„æ—¶é—´  
+	UpdateFrameMatrices(g_pFrameRoot, &matFinal);   //æ›´æ–°æ¡†æ¶ä¸­çš„å˜æ¢çŸ©é˜µ  
 }
 
 //------------------------------------------------------------------------------
-//	ŠÖ”–¼:	void CBuildManager::Draw
-//	ˆø”:	‚È‚µ
-//	–ß‚è’l:	‚È‚µ
-//	à–¾:	•`‰æˆ—
+//	é–¢æ•°å:	void CBuildManager::Draw
+//	å¼•æ•°:	ãªã—
+//	æˆ»ã‚Šå€¤:	ãªã—
+//	èª¬æ˜:	æç”»å‡¦ç†
 //------------------------------------------------------------------------------
 void CBuildManager::Draw(void)
 {
-	/*ƒŠƒXƒg\‘¢‚Ì•`‰æ*/
+	CManager *manager = GetManager();
+	CRenderer *renderer = manager->GetRenderer();
+	LPDIRECT3DDEVICE9 device = renderer->GetDevice();
+	/*ãƒªã‚¹ãƒˆæ§‹é€ ã®æç”»*/
 	CScene::DrawAll();
-	
+	DrawFrame(device, g_pFrameRoot);
 }
 CBuildLoadMap* CBuildManager::GetBuildLoadMap(void)
 {

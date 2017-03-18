@@ -1,8 +1,8 @@
-/********************************************************************************
-* ƒ^ƒCƒgƒ‹@GAME
-* ƒtƒ@ƒCƒ‹–¼@CGame.h
-* ì¬Ò AT13B284 42 —›İ·
-* ì¬“ú 2016/07/11
+ï»¿/********************************************************************************
+* ã‚¿ã‚¤ãƒˆãƒ«ã€€GAME
+* ãƒ•ã‚¡ã‚¤ãƒ«åã€€CGame.h
+* ä½œæˆè€… AT13B284 42 ææ˜Šç››
+* ä½œæˆæ—¥ 2016/07/11
 *
 ********************************************************************************/
 #ifndef _CGAME_H_
@@ -87,9 +87,9 @@
 #include "CGameRobot.h"
 #include "CTalkRobotImage.h"
 #include "CTextbubble.h"
-//ƒ}ƒNƒ’è‹`
+//ãƒã‚¯ãƒ­å®šç¾©
 
-/* ‘O•ûéŒ¾ */
+/* å‰æ–¹å®£è¨€ */
 class CRenderer;
 class CScene;
 class CSceneInput;
@@ -227,10 +227,10 @@ private:
 public:
 	CGame();
 	~CGame();
-	virtual void Init(void);		// ‰Šú‰»ˆ—
-	virtual void Uninit(void);		// I—¹ˆ—
-	virtual void Draw(void);		//•`‰æˆ—
-	virtual void Update(void);		//XVˆ—
+	virtual void Init(void);		// åˆæœŸåŒ–å‡¦ç†
+	virtual void Uninit(void);		// çµ‚äº†å‡¦ç†
+	virtual void Draw(void);		//æç”»å‡¦ç†
+	virtual void Update(void);		//æ›´æ–°å‡¦ç†
 
 	CField* GetField(void);
 

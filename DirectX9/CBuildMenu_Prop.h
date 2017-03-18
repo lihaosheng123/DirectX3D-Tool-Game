@@ -14,6 +14,7 @@
 
 class CBuildMenu_Prop :public CScene
 {
+	//フレンドクラス
 	friend class CBuildMenu;
 	friend class CProp;
 	friend class CBuildMap;

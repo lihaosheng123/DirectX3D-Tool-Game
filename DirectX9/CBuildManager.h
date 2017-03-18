@@ -1,17 +1,18 @@
-/********************************************************************************
-* ƒ^ƒCƒgƒ‹@CBUILDMANAGER
-* ƒtƒ@ƒCƒ‹–¼@CBuildManager.h
-* ì¬Ò AT13B284 42 —›İ·
-* ì¬“ú 2016/12/19
-*Build‚Ìƒ}ƒlƒWƒƒ[
+ï»¿/********************************************************************************
+* ã‚¿ã‚¤ãƒˆãƒ«ã€€CBUILDMANAGER
+* ãƒ•ã‚¡ã‚¤ãƒ«åã€€CBuildManager.h
+* ä½œæˆè€… AT13B284 42 ææ˜Šç››
+* ä½œæˆæ—¥ 2016/12/19
+*Buildã®ãƒãƒã‚¸ãƒ£ãƒ¼
 ********************************************************************************/
 #ifndef _CBUILDMANAGER_H_
 #define _CBUILDMANAGER_H_
-//main—p(d—v)
+//mainç”¨(é‡è¦)
 #include "main.h"
 #include "scene.h"
 #include "Mode.h"
 #include "CBuildMap.h"
+#include "CAnimModel.h"
 #include "CLoadMap.h"
 #include "CBuildCamera.h"
 #include "CBuildLoadMap.h"
@@ -20,15 +21,15 @@
 #include "sceneMouse.h"
 #include "BuildSetMap.h"
 #include "renderer.h"
-//2DMenu‚Ì•`‰æ
+//2DMenuã®æç”»
 #include "CBuildMenu.h"
 #include "CBuildMenu_Wall.h"
 #include "CBuildMenu_Enemy.h"
 #include "CBuildMenu_Another.h"
 #include "CBuildMenu_Prop.h"
-//2D•`‰æ
+//2Dæç”»
 #include "CBuildImage.h"
-//3D•`‰æ
+//3Dæç”»
 #include "CField.h"
 #include "CWall_001.h"
 #include "CWall_002.h"
@@ -38,7 +39,7 @@
 #include "skybox.h"
 #include "CColumnar.h"
 #include "CEnd.h"
-//3Dƒ‚ƒfƒ‹
+//3Dãƒ¢ãƒ‡ãƒ«
 #include "CModel.h"
 #include "CPlayer.h"
 #include "CEnemy_001.h"
@@ -47,10 +48,10 @@
 #include "CStart.h"
 #include "CPoint.h"
 #include "CRobot.h"
-//‘¼
+//ä»–
 #include "CBuildLight.h"
-/* ‘O•ûéŒ¾ŠJn */
-//main—p(d—v)
+/* å‰æ–¹å®£è¨€é–‹å§‹ */
+//mainç”¨(é‡è¦)
 class CScene;
 class CMode;
 class CBuildMap;
@@ -62,15 +63,15 @@ class CSceneInput;
 class CSceneMouse;
 class CBuildSetMap;
 class CRenderer;
-//2DMenu‚Ì•`‰æ
+//2DMenuã®æç”»
 class CBuildMenu;
 class CBuildMenu_Wall;
 class CBuildMenu_Enemy;
 class CBuildMenu_Another;
 class CBuildMenu_Prop;
-//2D•`‰æ
+//2Dæç”»
 class CBuildImage;
-//3D•`‰æ
+//3Dæç”»
 class CField;
 class CWall_001;
 class CWall_002;
@@ -80,7 +81,7 @@ class Caxis;
 class CSkybox;
 class CColumnar;
 class CEnd;
-//3Dƒ‚ƒfƒ‹
+//3Dãƒ¢ãƒ‡ãƒ«
 class CModel;
 class CPlauer;
 class CEnemy_001;
@@ -89,31 +90,32 @@ class CDoor;
 class CStart;
 class CPoint;
 class CRobot;
-//‘¼
+//ä»–
 class CBuildLight;
-/* ‘O•ûéŒ¾I‚í‚é*/
+class CAllocateHierarchy;
+/* å‰æ–¹å®£è¨€çµ‚ã‚ã‚‹*/
 /*******************************************************************************
-ƒNƒ‰ƒXéŒ¾
+ã‚¯ãƒ©ã‚¹å®£è¨€
 *******************************************************************************/
 class CBuildManager : public CMode
 {
 private:
-	//main—p(d—v)
+	//mainç”¨(é‡è¦)
 	CBuildCamera *m_BuildCamera;
 	CSceneMouse *m_Mouse;
 	CRenderer *m_Renderer;
 	CBuildMap *m_BuildMap;
 	CBuildLoadMap *m_BuildLoadMap;
 	BuildSetMap *m_BuildSetMap;
-	//2DMenu‚Ì•`‰æ
+	//2DMenuã®æç”»
 	CBuildMenu *m_BuildMenu;
 	CBuildMenu_Wall *m_BuildMenu_Wall;
 	CBuildMenu_Enemy *m_BuildMenu_Enemy;
 	CBuildMenu_Prop *m_BuildMenu_Prop;
 	CBuildMenu_Another *m_BuildMenu_Another;
-	//2D•`‰æ
+	//2Dæç”»
 	CBuildImage *m_BuildImage;
-	//3D•`‰æ
+	//3Dæç”»
 	CField *m_Field;
 	CSkybox *m_sky;
 	CWall_001 *m_Wall_001[1];
@@ -126,7 +128,7 @@ private:
 	CCeiling *m_Ceiling[1];
 	CColumnar *m_Columnar;
 	CEnd *m_End;
-	//3Dƒ‚ƒfƒ‹
+	//3Dãƒ¢ãƒ‡ãƒ«
 	CPlayer *m_Player;
 	CEnemy_001 *m_Enemy_001[1];
 	CEnemy_002 *m_Enemy_002[1];	
@@ -138,17 +140,17 @@ private:
 	CGamePoint *m_GamePoint;
 	CStart *m_Start;
 	CRobot *m_Robot;
-	//‘¼
+	//ä»–
 	CBuildLight *m_Light;
 	CDebugProc *m_Debug;
 
 public:
 	CBuildManager();
 	~CBuildManager();
-	virtual void Init(void);		// ‰Šú‰»ˆ—
-	virtual void Uninit(void);		// I—¹ˆ—
-	virtual void Draw(void);		//•`‰æˆ—
-	virtual void Update(void);		//XVˆ—
+	virtual void Init(void);		// åˆæœŸåŒ–å‡¦ç†
+	virtual void Uninit(void);		// çµ‚äº†å‡¦ç†
+	virtual void Draw(void);		//æç”»å‡¦ç†
+	virtual void Update(void);		//æ›´æ–°å‡¦ç†
 
 
 	CBuildCamera* GetBuildCamera(void);
@@ -182,5 +184,12 @@ public:
 
 	HINSTANCE hInstance;
 	HWND hWnd;
+
+
+	//å››ä¸ªå’Œéª¨éª¼åŠ¨ç”»ç›¸å…³çš„å…¨å±€å˜é‡  
+	LPD3DXFRAME                 g_pFrameRoot = NULL;
+	D3DXMATRIX*                 g_pBoneMatrices = NULL;
+	CAllocateHierarchy*         g_pAllocateHier = NULL;
+	LPD3DXANIMATIONCONTROLLER   g_pAnimController = NULL;
 };
 #endif

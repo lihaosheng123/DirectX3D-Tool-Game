@@ -17,6 +17,7 @@
 *******************************************************************************/
 class CBuildMenu_Enemy :public CScene
 {
+	//フレンドクラス
 	friend class CBuildMenu;
 	friend class CEnemy;
 	friend class CBuildMap;

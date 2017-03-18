@@ -1,19 +1,19 @@
-/********************************************************************************
-* ƒ^ƒCƒgƒ‹@GAMEƒ‚[ƒh
-* ƒtƒ@ƒCƒ‹–¼@CGame.cpp
-* ì¬ŽÒ AT13B284 42 —›Ý·
-* ì¬“ú 2016/07/11
-GAME‚Ìƒ‚[ƒhˆ—
+ï»¿/********************************************************************************
+* ã‚¿ã‚¤ãƒˆãƒ«ã€€GAMEãƒ¢ãƒ¼ãƒ‰
+* ãƒ•ã‚¡ã‚¤ãƒ«åã€€CGame.cpp
+* ä½œæˆè€… AT13B284 42 æŽæ˜Šç››
+* ä½œæˆæ—¥ 2016/07/11
+GAMEã®ãƒ¢ãƒ¼ãƒ‰å‡¦ç†
 ********************************************************************************/
 #include "CGame.h"
 #include<stdio.h>
 #include<stdlib.h>
 #include<time.h>
 //------------------------------------------------------------------------------
-//	ŠÖ”–¼:	CGame::CGame
-//	ˆø”:	‚È‚µ
-//	–ß‚è’l:	‚È‚µ
-//	à–¾:	ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+//	é–¢æ•°å:	CGame::CGame
+//	å¼•æ•°:	ãªã—
+//	æˆ»ã‚Šå€¤:	ãªã—
+//	èª¬æ˜Ž:	ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 //------------------------------------------------------------------------------
 CGame::CGame()
 {
@@ -23,25 +23,27 @@ CGame::CGame()
 }
 
 //------------------------------------------------------------------------------
-//	ŠÖ”–¼:	CGame::~CGame
-//	ˆø”:	‚È‚µ
-//	–ß‚è’l:	CGame
-//	à–¾:	ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+//	é–¢æ•°å:	CGame::~CGame
+//	å¼•æ•°:	ãªã—
+//	æˆ»ã‚Šå€¤:	CGame
+//	èª¬æ˜Ž:	ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 //------------------------------------------------------------------------------
 CGame::~CGame()
 {
 }
 
 //------------------------------------------------------------------------------
-//	ŠÖ”–¼:	void CGame::Init
-//	ˆø”:	‚È‚µ
-//	–ß‚è’l:	‚È‚µ
-//	à–¾:	‰Šú‰»ˆ—
+//	é–¢æ•°å:	void CGame::Init
+//	å¼•æ•°:	ãªã—
+//	æˆ»ã‚Šå€¤:	ãªã—
+//	èª¬æ˜Ž:	åˆæœŸåŒ–å‡¦ç†
 //------------------------------------------------------------------------------
 void CGame::Init(void)
 {
 	CManager *manager = GetManager();
 	CGame *game = (CGame*)CManager::GetMode();
+	CRenderer *renderer = manager->GetRenderer();
+	LPDIRECT3DDEVICE9 device = renderer->GetDevice();
 	m_Light = new CLight;
 	m_Light->Init();
 
@@ -95,6 +97,7 @@ void CGame::Init(void)
 	m_PowerMax = CPowerMax::Create(D3DXVECTOR3(1170.0f, 35.0f, 0.0f), D3DXVECTOR3(0.0f, 0.0f, 0.0f), 50.0f, 180.0f, TEXTURE_POWERMAX_FILE);
 
 
+
 #ifdef _DEBUG
 	m_Debug = new CDebugProc;
 	m_Debug->Init();
@@ -103,10 +106,10 @@ void CGame::Init(void)
 }
 
 //------------------------------------------------------------------------------
-//	ŠÖ”–¼:	void CGame::Uninit
-//	ˆø”:	‚È‚µ
-//	–ß‚è’l:	‚È‚µ
-//	à–¾:	I—¹ˆ—
+//	é–¢æ•°å:	void CGame::Uninit
+//	å¼•æ•°:	ãªã—
+//	æˆ»ã‚Šå€¤:	ãªã—
+//	èª¬æ˜Ž:	çµ‚äº†å‡¦ç†
 //------------------------------------------------------------------------------
 void CGame::Uninit(void)
 {
@@ -135,14 +138,16 @@ void CGame::Uninit(void)
 }
 
 //------------------------------------------------------------------------------
-//	ŠÖ”–¼:	void CGame::Update
-//	ˆø”:	‚È‚µ
-//	–ß‚è’l:	‚È‚µ
-//	à–¾:	XVˆ—
+//	é–¢æ•°å:	void CGame::Update
+//	å¼•æ•°:	ãªã—
+//	æˆ»ã‚Šå€¤:	ãªã—
+//	èª¬æ˜Ž:	æ›´æ–°å‡¦ç†
 //------------------------------------------------------------------------------
 void CGame::Update(void)
 {
 	CManager *manager = GetManager();
+	CRenderer *renderer = manager->GetRenderer();
+	LPDIRECT3DDEVICE9 device = renderer->GetDevice();
 	CSceneInput *m_Input = manager -> GetInput();
 
 	m_Number->Update();
@@ -152,25 +157,25 @@ void CGame::Update(void)
 #ifdef _DEBUG
 	m_Debug -> Update();
 #endif
-
 	m_LoadMap->Update();
 
 }
 
 //------------------------------------------------------------------------------
-//	ŠÖ”–¼:	void CGame::Draw
-//	ˆø”:	‚È‚µ
-//	–ß‚è’l:	‚È‚µ
-//	à–¾:	•`‰æˆ—
+//	é–¢æ•°å:	void CGame::Draw
+//	å¼•æ•°:	ãªã—
+//	æˆ»ã‚Šå€¤:	ãªã—
+//	èª¬æ˜Ž:	æç”»å‡¦ç†
 //------------------------------------------------------------------------------
 void CGame::Draw(void)
 {	
-
+	CManager *manager = GetManager();
+	CRenderer *renderer = manager->GetRenderer();
+	LPDIRECT3DDEVICE9 device = renderer->GetDevice();
 	CScene::DrawAll();
 #ifdef _DEBUG
 	m_Debug -> Draw();
 #endif
-
 
 }
 

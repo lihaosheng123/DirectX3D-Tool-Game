@@ -50,8 +50,6 @@ void CCamera::Init(void)
 	// 向き（角度）
 	rot  = D3DXVECTOR3( 0.0f,   0.0f,    0.0f );
 
-
-	// m_posVとm_posRの対角線の長さ
 	// posVとposRの対角線の長さ
 	m_fDistance = sqrtf( ( ( m_posR.x - m_posV.x ) * ( m_posR.z - m_posV.z ) )   + ( ( m_posR.z - m_posV.z ) * ( m_posR.z - m_posV.z ) ) );
 
@@ -101,13 +99,14 @@ void CCamera::Update( void )
 
 	// ビューマトリックスの設定
 	device->SetTransform( D3DTS_VIEW, &m_mtxView );
+	//生きている
 	if (m_Model->m_Dead == false && m_Model->m_HP > 0)
 	{
-		rot.y += m_Mouse->g_MouseState.lX *0.010f;
+		rot.y += m_Mouse->g_MouseState.lX *0.010f;		//カメラの向き更新
 		m_Vektor = m_posR - m_posV;		//ベクトルを計算
 		//正規化
 		D3DXVec3Normalize(&m_regulator, &m_Vektor);
-		m_posR.y -= m_Mouse->g_MouseState.lY * 0.525f;
+		m_posR.y -= m_Mouse->g_MouseState.lY * 0.525f;		//カメラの注視点y向き更新
 
 		m_Model->m_Rotation.y = rot.y;
 		m_Model->m_Rotation.x = -m_regulator.y;
@@ -115,8 +114,8 @@ void CCamera::Update( void )
 		m_posV.x = m_Model->m_Position.x;		//posR(注視点)からposV(視点)を求める。
 		m_posV.y = m_Model->m_Position.y + 10.0f;		//?
 		m_posV.z = m_Model->m_Position.z;		//posR(·注視点)からposV(視点)を求める。
-		m_posR.x = m_posV.x;														//モデルの座標からposR(注視点)を求める。
-		m_posR.z = m_posV.z;														//モデルの座標からposR(注視点)を求める。
+		//m_posR.x = m_posV.x;														//モデルの座標からposR(注視点)を求める。
+		//m_posR.z = m_posV.z;														//モデルの座標からposR(注視点)を求める。
 	}
 	//向き角度のチェック
 	if( rot.y > D3DX_PI )
@@ -142,7 +141,7 @@ void CCamera::Update( void )
 		m_posR.x = m_posV.x + m_fDistance * sinf( rot.y );
 		m_posR.z = m_posV.z + m_fDistance * cosf( rot.y );
 	}
-
+	// XZ平面とスクリーン座標の交点算出関数
 	m_Mouse->CalcScreenToXZ(&m_3DPos, (int)m_Mouse->g_Mouse.x, (int)m_Mouse->g_Mouse.y, SCREEN_WIDTH, SCREEN_HEIGHT, &m_mtxView, &m_mtxProjection);
 	if (m_Model->m_Dead == true && m_Model->m_HP <= 0)
 	{

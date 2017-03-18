@@ -274,7 +274,7 @@ void CBuildMenu_Enemy::Update(void)
 		}
 	}
 }
-
+//ƒŠƒXƒg\‘¢•`‰æ
 CBuildMenu_Enemy* CBuildMenu_Enemy::Create(D3DXVECTOR3 pos, D3DXVECTOR3 rot, float height, float width, LPCSTR TEXTURE_FILE)
 {
 	CBuildMenu_Enemy *m_BuildMenu_Enemy;

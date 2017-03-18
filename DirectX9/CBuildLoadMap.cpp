@@ -205,7 +205,8 @@ void CBuildLoadMap::LoadWall_001(const char *fileName, HINSTANCE hInstance, HWND
 	{
 		while (!feof(pFile))
 		{
-			fscanf_s(pFile, "%s", aStr, sizeof(aStr)); // 行データを取得する
+			fscanf_s(pFile, "%s", aStr, sizeof(aStr)); // 行データを取得するぎょう
+			//文字列の比較
 			if (strcmp(aStr, "pos") == 0)
 			{
 				// 座標情報

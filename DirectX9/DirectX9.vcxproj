@@ -113,6 +113,7 @@
     <ClInclude Include="BuildSetMap.h" />
     <ClInclude Include="bullet.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="CAnimModel.h" />
     <ClInclude Include="Caxis.h" />
     <ClInclude Include="CBuildCamera.h" />
     <ClInclude Include="CBuildImage.h" />
@@ -222,6 +223,7 @@
     <ClCompile Include="BuildSetMap.cpp" />
     <ClCompile Include="bullet.cpp" />
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="CAnimModel.cpp" />
     <ClCompile Include="Caxis.cpp" />
     <ClCompile Include="CBuildCamera.cpp" />
     <ClCompile Include="CBuildImage.cpp" />

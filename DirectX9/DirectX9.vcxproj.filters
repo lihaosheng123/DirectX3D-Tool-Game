@@ -354,6 +354,9 @@
     <ClInclude Include="CTitleSkyBox.h">
       <Filter>ヘッダー ファイル\TITLE</Filter>
     </ClInclude>
+    <ClInclude Include="CAnimModel.h">
+      <Filter>ヘッダー ファイル\GAME</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CField.cpp">
@@ -643,6 +646,9 @@
     </ClCompile>
     <ClCompile Include="CTitleSkyBox.cpp">
       <Filter>ソース ファイル\TITLE</Filter>
+    </ClCompile>
+    <ClCompile Include="CAnimModel.cpp">
+      <Filter>ソース ファイル\GAME</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
