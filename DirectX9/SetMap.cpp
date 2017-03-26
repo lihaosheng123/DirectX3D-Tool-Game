@@ -25,11 +25,13 @@
 //------------------------------------------------------------------------------
 SetMap::SetMap()
 {
-	CManager *manager = GetManager();
-	CGame *game = (CGame*)CManager::GetMode();
-	CLoadMap *m_LoadMap = game->GetLoadMap();
-
-
+	m_GameWall_001 = NULL;
+	m_GameWall_002 = NULL;
+	m_GameEnemy_001 = NULL;
+	m_GameEnemy_002;
+	m_GameCeiling = NULL;
+	m_GameDoor = NULL;
+	m_GamePoint = NULL;
 }
 
 //------------------------------------------------------------------------------
@@ -101,48 +103,13 @@ void SetMap::Init(void)
 *******************************************************************************/
 void SetMap::Uninit(void)
 {
-	CManager *manager = GetManager();
-	CRenderer *renderer = manager->GetRenderer();
-	CGame *game = (CGame*)CManager::GetMode();
-	CLoadMap *m_LoadMap = game->GetLoadMap();
-	CGameWall_001 *m_GameWall_001 = game->GetGameWall_001();
-	CGameWall_002 *m_GameWall_002 = game->GetGameWall_002();
-	CGameEnemy_001 *m_GameEnemy_001 = game->GetGameEnemy_001();
-	CGameEnemy_002 *m_GameEnemy_002 = game->GetGameEnemy_002();
-	CGameCeiling *m_GameCeiling = game->GetGameCeiling();
-	CGameDoor *m_GameDoor = game->GetGameDoor();
-	CGamePoint *m_GamePoint = game->GetGamePoint();
-
-	for (int i = 0; i < m_LoadMap->m_Wall001_num; i++)
-	{
-		m_GameWall_001->UninitAll();
-	}
-	for (int i = 0; i < m_LoadMap->m_Wall002_num; i++)
-	{
-		m_GameWall_002->UninitAll();
-	}
-	for (int i = 0; i < m_LoadMap->m_Ceiling_num; i++)
-	{
-		m_GameCeiling->UninitAll();
-	}
-	for (int i = 0; i < m_LoadMap->m_Enemy001_num; i++)
-	{
-		m_GameEnemy_001->UninitAll();
-	}
-
-	for (int i = 0; i < m_LoadMap->m_Enemy002_num; i++)
-	{
-		m_GameEnemy_002->UninitAll();
-	}
-	for (int i = 0; i < m_LoadMap->m_Door_num; i++)
-	{
-		m_GameDoor->UninitAll();
-	}
-	for (int i = 0; i < m_LoadMap->m_Point_num; i++)
-	{
-		m_GamePoint->UninitAll();
-	}
-
+	m_GameWall_001 = NULL;
+	m_GameWall_002 = NULL;
+	m_GameEnemy_001 = NULL;
+	m_GameEnemy_002;
+	m_GameCeiling = NULL;
+	m_GameDoor = NULL;
+	m_GamePoint = NULL;
 }
 
 /*******************************************************************************
@@ -153,13 +120,7 @@ void SetMap::Uninit(void)
 *******************************************************************************/
 void SetMap::Update()
 {
-	CManager *manager = GetManager();
-	CRenderer *renderer = manager->GetRenderer();
-	CGame *game = (CGame*)CManager::GetMode();
-	CGameWall_001 *m_GameWall_001 = game->GetGameWall_001();
-	CGameWall_002 *m_GameWall_002 = game->GetGameWall_002();
-	CGameEnemy_001 *m_GameEnemy_001 = game->GetGameEnemy_001();
-	CGameEnemy_002 *m_GameEnemy_002 = game->GetGameEnemy_002();
+
 
 }
 

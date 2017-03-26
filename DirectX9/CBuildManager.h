@@ -93,6 +93,7 @@ class CRobot;
 //他
 class CBuildLight;
 class CAllocateHierarchy;
+class CAnimModel;
 /* 前方宣言終わる*/
 /*******************************************************************************
 クラス宣言
@@ -143,7 +144,7 @@ private:
 	//他
 	CBuildLight *m_Light;
 	CDebugProc *m_Debug;
-
+	CAnimModel *m_AnimModel;
 public:
 	CBuildManager();
 	~CBuildManager();
@@ -184,12 +185,5 @@ public:
 
 	HINSTANCE hInstance;
 	HWND hWnd;
-
-
-	//四个和骨骼动画相关的全局变量  
-	LPD3DXFRAME                 g_pFrameRoot = NULL;
-	D3DXMATRIX*                 g_pBoneMatrices = NULL;
-	CAllocateHierarchy*         g_pAllocateHier = NULL;
-	LPD3DXANIMATIONCONTROLLER   g_pAnimController = NULL;
 };
 #endif

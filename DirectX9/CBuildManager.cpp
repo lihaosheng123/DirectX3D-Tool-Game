@@ -115,10 +115,8 @@ void CBuildManager::Init(void)
 	m_BuildMap = new CBuildMap;
 	m_BuildMap->Init();
 
-	g_pAllocateHier = new CAllocateHierarchy();
-	D3DXLoadMeshHierarchyFromX("lxq.x", D3DXMESH_MANAGED, device, g_pAllocateHier, NULL, &g_pFrameRoot, &g_pAnimController);
-	SetupBoneMatrixPointers(g_pFrameRoot, g_pFrameRoot);
-
+	m_AnimModel = new CAnimModel;
+	m_AnimModel->Init();
 }
 
 //------------------------------------------------------------------------------
@@ -150,7 +148,8 @@ void CBuildManager::Uninit(void)
 	/*リスト構造の削除*/
 	CScene::UninitAll();
 
-
+	m_AnimModel->Uninit();
+	delete m_AnimModel;
 
 }
 
@@ -183,16 +182,7 @@ void CBuildManager::Update(void)
 	//マックの作成と入力クラスの更新
 	m_BuildMap->Update(hInstance,hWnd);
 
-	// 设置骨骼动画的矩阵  
-	D3DXMATRIX matFinal, matScal;
-	D3DXMatrixIdentity(&matFinal);
-	D3DXMatrixScaling(&matScal, 5.0f, 9.0f, 5.0f);
-	matFinal = matScal *matFinal;
-	device->SetTransform(D3DTS_WORLD, &matFinal);
-
-	// 更新骨骼动画  
-	g_pAnimController->AdvanceTime(30.0f/1000.0f, NULL);  //设置骨骼动画的时间  
-	UpdateFrameMatrices(g_pFrameRoot, &matFinal);   //更新框架中的变换矩阵  
+	m_AnimModel->Update();
 }
 
 //------------------------------------------------------------------------------
@@ -208,7 +198,7 @@ void CBuildManager::Draw(void)
 	LPDIRECT3DDEVICE9 device = renderer->GetDevice();
 	/*リスト構造の描画*/
 	CScene::DrawAll();
-	DrawFrame(device, g_pFrameRoot);
+	m_AnimModel->Draw();
 }
 CBuildLoadMap* CBuildManager::GetBuildLoadMap(void)
 {

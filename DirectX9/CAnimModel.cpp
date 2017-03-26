@@ -1,23 +1,32 @@
-﻿//=============================================================================
-// Desc: AllocateHierarchyClass.cpp
-// 来自微软官方DirectX SDK Samples中的骨骼动画类
-//=============================================================================
+﻿/********************************************************************************
+* タイトル　CAnimModel.cpp
+* 作成者 AT13B284 42 李昊盛
+* 作成日 2017/03/18
+* モデルのマンション管理
+********************************************************************************/
 
 #include "CAnimModel.h"
+CAnimModel::CAnimModel()
+{
+	m_pTexture = NULL;
+}
+CAnimModel::~CAnimModel()
+{
 
+}
 //--------------------------------------------------------------------------------------
 // Name: AllocateName()
-// Desc: 为骨骼或网格名称的字符串分配内存
+// Desc: マンションとメッシュのnameためにメモリーを保存
 //--------------------------------------------------------------------------------------
-HRESULT AllocateName(LPCSTR Name, LPSTR* pNewName)
+HRESULT AllocateName(LPCSTR Name, LPSTR	* pNewName)
 {
-	UINT cbLength;
+	UINT cbLength;	//絶対値
 
-	if (Name != NULL)
+	if (Name != NULL)	//使用
 	{
-		cbLength = (UINT)strlen(Name) + 1;
-		*pNewName = new CHAR[cbLength];
-		memcpy(*pNewName, Name, cbLength * sizeof(CHAR));
+		cbLength = (UINT)strlen(Name) + 1;		//絶対値変更
+		*pNewName = new char[cbLength];	//インスタンス
+		memcpy(*pNewName/*コーピ先*/, Name, cbLength * sizeof(char));		//メモリーコーピ
 	}
 	else
 	{
@@ -29,22 +38,30 @@ HRESULT AllocateName(LPCSTR Name, LPSTR* pNewName)
 
 //--------------------------------------------------------------------------------------
 // Name: GenerateSkinnedMesh
+// Desc:作成する、
 // Desc: 生成蒙皮网格模型。该函数判断当前网格容器是否包含有蒙皮信息，如果当前网格模型
 //       中不包含蒙皮信息，则直接退出该函数。接下来确定所需要的矩阵调色板容量。最后调
-//       用ID3DXSkinInfo::ConvertToIndexedBlendedMesh()函数生成索引蒙皮网格模型
+//用ID3DXSkinInfo::ConvertToIndexedBlendedMesh()函数生成索引蒙皮网格模型
 //--------------------------------------------------------------------------------------
-HRESULT GenerateSkinnedMesh(IDirect3DDevice9* pd3dDevice, D3DXMESHCONTAINER_DERIVED* pMeshContainer)
+HRESULT GenerateSkinnedMesh(D3DXMESHCONTAINER_DERIVED* pMeshContainer)
 {
+	CManager *manager = GetManager();
+	CRenderer *renderer = manager->GetRenderer();
+	LPDIRECT3DDEVICE9 device = renderer->GetDevice();
+
 	D3DCAPS9 d3dCaps;
-	pd3dDevice->GetDeviceCaps(&d3dCaps);
+	device->GetDeviceCaps(&d3dCaps);//デバイスの能力を記述した情報が格納
 
 	if (pMeshContainer->pSkinInfo == NULL)
+	{
 		return S_OK;
+	}
 
+	//解放する
 	SAFE_RELEASE(pMeshContainer->MeshData.pMesh);
 	SAFE_RELEASE(pMeshContainer->pBoneCombinationBuf);
 
-
+	//メッシュを受け取り、頂点単位のブレンドの重みとボーンの組み合わせテーブル
 	if (FAILED(pMeshContainer->pSkinInfo->ConvertToBlendedMesh(
 		pMeshContainer->pOrigMesh,
 		D3DXMESH_MANAGED | D3DXMESHOPT_VERTEXCACHE,
@@ -62,7 +79,7 @@ HRESULT GenerateSkinnedMesh(IDirect3DDevice9* pd3dDevice, D3DXMESHCONTAINER_DERI
 
 //--------------------------------------------------------------------------------------
 // Name: CAllocateHierarchy::CreateFrame()
-// Desc: 创建框架, 仅仅是分配内存和初始化,还没有对其成员赋予合适的值
+// Desc: 作成する、初期化
 //--------------------------------------------------------------------------------------
 HRESULT CAllocateHierarchy::CreateFrame(LPCSTR Name, LPD3DXFRAME* ppNewFrame)
 {
@@ -232,7 +249,7 @@ HRESULT CAllocateHierarchy::CreateMeshContainer(LPCSTR Name,
 		}
 
 		// GenerateSkinnedMesh will take the general skinning information and transform it to a HW friendly version
-		hr = GenerateSkinnedMesh(pd3dDevice, pMeshContainer);
+		hr = GenerateSkinnedMesh(pMeshContainer);
 		if (FAILED(hr))
 			goto e_Exit;
 	}
@@ -300,7 +317,7 @@ HRESULT CAllocateHierarchy::DestroyMeshContainer(LPD3DXMESHCONTAINER pMeshContai
 // Name: SetupBoneMatrixPointers()
 // Desc: 设置好各级框架的组合变换矩阵。
 //--------------------------------------------------------------------------------------
-HRESULT SetupBoneMatrixPointers(LPD3DXFRAME pFrameBase, LPD3DXFRAME pFrameRoot)
+HRESULT CAnimModel::SetupBoneMatrixPointers(LPD3DXFRAME pFrameBase, LPD3DXFRAME pFrameRoot)
 {
 	if (pFrameBase->pMeshContainer != NULL)
 	{
@@ -341,7 +358,7 @@ HRESULT SetupBoneMatrixPointers(LPD3DXFRAME pFrameBase, LPD3DXFRAME pFrameRoot)
 // Name: DrawMeshContainer()
 // Desc: 绘制蒙皮容器中的蒙皮网格
 //--------------------------------------------------------------------------------------
-void DrawMeshContainer(IDirect3DDevice9* pd3dDevice, LPD3DXMESHCONTAINER pMeshContainerBase, LPD3DXFRAME pFrameBase)
+void CAnimModel::DrawMeshContainer(IDirect3DDevice9* pd3dDevice, LPD3DXMESHCONTAINER pMeshContainerBase, LPD3DXFRAME pFrameBase)
 {
 	D3DXMESHCONTAINER_DERIVED* pMeshContainer = (D3DXMESHCONTAINER_DERIVED*)pMeshContainerBase;
 	D3DXFRAME_DERIVED* pFrame = (D3DXFRAME_DERIVED*)pFrameBase;
@@ -383,7 +400,7 @@ void DrawMeshContainer(IDirect3DDevice9* pd3dDevice, LPD3DXMESHCONTAINER pMeshCo
 					if (iMatrixIndex != UINT_MAX)
 					{
 						D3DXMatrixMultiply(&matTemp, &pMeshContainer->pBoneOffsetMatrices[iMatrixIndex],
-							pMeshContainer->ppBoneMatrixPtrs[iMatrixIndex]);
+						pMeshContainer->ppBoneMatrixPtrs[iMatrixIndex]);
 						pd3dDevice->SetTransform(D3DTS_WORLDMATRIX(i), &matTemp);
 					}
 				}
@@ -394,7 +411,6 @@ void DrawMeshContainer(IDirect3DDevice9* pd3dDevice, LPD3DXMESHCONTAINER pMeshCo
 				if ((AttribIdPrev != pBoneComb[iAttrib].AttribId) || (AttribIdPrev == UNUSED32))
 				{
 					pd3dDevice->SetMaterial(&pMeshContainer->pMaterials[pBoneComb[iAttrib].AttribId].MatD3D);
-					pd3dDevice->SetTexture(0, pMeshContainer->ppTextures[pBoneComb[iAttrib].AttribId]);
 					AttribIdPrev = pBoneComb[iAttrib].AttribId;
 				}
 
@@ -411,37 +427,60 @@ void DrawMeshContainer(IDirect3DDevice9* pd3dDevice, LPD3DXMESHCONTAINER pMeshCo
 		for (iMaterial = 0; iMaterial < pMeshContainer->NumMaterials; iMaterial++)
 		{
 			pd3dDevice->SetMaterial(&pMeshContainer->pMaterials[iMaterial].MatD3D);
-			pd3dDevice->SetTexture(0, pMeshContainer->ppTextures[iMaterial]);
 			pMeshContainer->MeshData.pMesh->DrawSubset(iMaterial);
 		}
 	}
 }
 
-
 //--------------------------------------------------------------------------------------
 // Name: DrawFrame()
 // Desc: 绘制骨骼
 //--------------------------------------------------------------------------------------
-void DrawFrame(IDirect3DDevice9* pd3dDevice, LPD3DXFRAME pFrame)
+void CAnimModel::DrawFrame(LPD3DXFRAME pFrame)
 {
+	CManager *manager = GetManager();
+	CRenderer *renderer = manager->GetRenderer();
+	LPDIRECT3DDEVICE9 device = renderer->GetDevice();
+
 	if (pFrame == NULL) return;
 	LPD3DXMESHCONTAINER pMeshContainer;
 	pMeshContainer = pFrame->pMeshContainer;                    // 取得网格容器
 	while (pMeshContainer != NULL)
 	{
-		DrawMeshContainer(pd3dDevice, pMeshContainer, pFrame);  // 绘制非空蒙皮网格
+		DrawMeshContainer(device, pMeshContainer, pFrame);  // 绘制非空蒙皮网格
 		pMeshContainer = pMeshContainer->pNextMeshContainer;    // 遍历所有网格容器
-	}
+	}	
 
-	DrawFrame(pd3dDevice, pFrame->pFrameSibling);               // 绘制兄弟框架
-	DrawFrame(pd3dDevice, pFrame->pFrameFirstChild);            // 绘制子框架
+	DrawFrame(pFrame->pFrameSibling);               // 绘制兄弟框架
+	DrawFrame(pFrame->pFrameFirstChild);            // 绘制子框架
 }
+//--------------------------------------------------------------------------------------
+// Name: Init()
+// Desc: 初期化
+//--------------------------------------------------------------------------------------
+void CAnimModel::Init(void)
+{
+	CManager *manager = GetManager();
+	CRenderer *renderer = manager->GetRenderer();
+	LPDIRECT3DDEVICE9 device = renderer->GetDevice();
 
+	D3DXCreateTextureFromFile(device, "data\\TEXTURE\\T_Fencer_Dude_DBrown.jpg", &m_pTexture);// テクスチャ読み込み
+	g_pAllocateHier = new CAllocateHierarchy();
+	D3DXLoadMeshHierarchyFromX("jiaochuai.x", D3DXMESH_MANAGED, device, g_pAllocateHier, NULL, &g_pFrameRoot, &g_pAnimController);
+	SetupBoneMatrixPointers(g_pFrameRoot, g_pFrameRoot);
+	LPD3DXANIMATIONSET pAnimationSet = NULL;
+	g_pAnimController->GetAnimationSetByName("jiaochuai", &pAnimationSet);
+	g_pAnimController->SetTrackAnimationSet((UINT)1.0f, pAnimationSet);
+
+	m_Position = D3DXVECTOR3(0.0f, 400.0f, -100.0f);	// 頂点座標
+	m_Rotation = D3DXVECTOR3(-1.57f, 0.0f, 0.0f);	// 回転
+	m_scl = D3DXVECTOR3(2.0f, 2.0f, 2.0f);	
+}
 //--------------------------------------------------------------------------------------
 // Name: UpdateFrameMatrics()
 // Desc: 更新框架中的变换矩阵
 //--------------------------------------------------------------------------------------
-void UpdateFrameMatrices(LPD3DXFRAME pFrameBase, LPD3DXMATRIX pParentMatrix)
+void CAnimModel::UpdateFrameMatrices(LPD3DXFRAME pFrameBase, LPD3DXMATRIX pParentMatrix)
 {
 	if (pFrameBase == NULL || pParentMatrix == NULL) return;
 	D3DXFRAME_DERIVED* pFrame = (D3DXFRAME_DERIVED*)pFrameBase;
@@ -451,4 +490,54 @@ void UpdateFrameMatrices(LPD3DXFRAME pFrameBase, LPD3DXMATRIX pParentMatrix)
 
 	UpdateFrameMatrices(pFrame->pFrameSibling, pParentMatrix);                              // 更新兄弟骨骼
 	UpdateFrameMatrices(pFrame->pFrameFirstChild, &pFrame->CombinedTransformationMatrix);   // 更新子骨骼
+}
+void CAnimModel::Update(void)
+{
+	CManager *manager = GetManager();
+	CRenderer *renderer = manager->GetRenderer();
+	LPDIRECT3DDEVICE9 device = renderer->GetDevice();
+}
+//--------------------------------------------------------------------------------------
+// Name: Draw()
+// Desc: 绘制骨骼
+//--------------------------------------------------------------------------------------
+void CAnimModel::Draw(void)
+{
+	CManager *manager = GetManager();
+	CRenderer *renderer = manager->GetRenderer();
+	LPDIRECT3DDEVICE9 device = renderer->GetDevice();
+	// ワールドマトリックスの初期化
+	D3DXMatrixIdentity(&m_mtxWorld);
+
+	// スケールを反映
+	D3DXMatrixScaling(&m_Matrix.Scl, m_scl.x, m_scl.y, m_scl.z);
+	D3DXMatrixMultiply(&m_mtxWorld, &m_mtxWorld, &m_Matrix.Scl);
+
+	// 回転を反映
+	D3DXMatrixRotationYawPitchRoll(&m_Matrix.Rot, m_Rotation.y, m_Rotation.x, m_Rotation.z);	// y,x,z
+	D3DXMatrixMultiply(&m_mtxWorld, &m_mtxWorld, &m_Matrix.Rot);
+
+	// 位置を反映
+	D3DXMatrixTranslation(&m_Matrix.Trans, m_Position.x, m_Position.y, m_Position.z);
+	D3DXMatrixMultiply(&m_mtxWorld, &m_mtxWorld, &m_Matrix.Trans);
+
+	// ワールドマトリックスを設定
+	device->SetTransform(D3DTS_WORLD, &m_mtxWorld);
+
+		// テクスチャの設定
+		device->SetTexture(0, m_pTexture);
+	// 更新骨骼动画  
+	g_pAnimController->AdvanceTime(30.0f / 1000.0f, NULL);  //设置骨骼动画的时间  
+	UpdateFrameMatrices(g_pFrameRoot, &m_mtxWorld);   //更新框架中的变换矩阵  
+	DrawFrame(g_pFrameRoot);
+}
+//--------------------------------------------------------------------------------------
+// Name: Uninit()
+// Desc: 绘制骨骼
+//--------------------------------------------------------------------------------------
+void CAnimModel::Uninit(void)
+{
+	g_pAllocateHier = new CAllocateHierarchy();
+	g_pAllocateHier->DestroyFrame(g_pFrameRoot);
+	SAFE_RELEASE(m_pTexture);
 }

@@ -355,7 +355,7 @@
       <Filter>ヘッダー ファイル\TITLE</Filter>
     </ClInclude>
     <ClInclude Include="CAnimModel.h">
-      <Filter>ヘッダー ファイル\GAME</Filter>
+      <Filter>ヘッダー ファイル\BUILD</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -648,7 +648,7 @@
       <Filter>ソース ファイル\TITLE</Filter>
     </ClCompile>
     <ClCompile Include="CAnimModel.cpp">
-      <Filter>ソース ファイル\GAME</Filter>
+      <Filter>ソース ファイル\BUILD</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

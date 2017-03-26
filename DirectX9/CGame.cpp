@@ -44,6 +44,7 @@ void CGame::Init(void)
 	CGame *game = (CGame*)CManager::GetMode();
 	CRenderer *renderer = manager->GetRenderer();
 	LPDIRECT3DDEVICE9 device = renderer->GetDevice();
+	//	インスタンス変数の生成と初期化処理
 	m_Light = new CLight;
 	m_Light->Init();
 
@@ -127,9 +128,9 @@ void CGame::Uninit(void)
 	m_SetMap->Uninit();
 	delete m_SetMap;
 
-
-
 	CScene::UninitAll();
+
+
 #ifdef _DEBUG
 	m_Debug->Uninit();
 	delete m_Debug;
@@ -158,7 +159,10 @@ void CGame::Update(void)
 	m_Debug -> Update();
 #endif
 	m_LoadMap->Update();
-
+	if (m_Input->GetKeyboardTrigger(DIK_F1))
+	{
+		CManager::SetMode(CManager::MODE_BUILD);
+	}
 }
 
 //------------------------------------------------------------------------------

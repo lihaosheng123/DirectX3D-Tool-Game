@@ -56,5 +56,12 @@ public:
 
 private:
 	int i;
+	CGameWall_001 *m_GameWall_001;
+	CGameWall_002 *m_GameWall_002;
+	CGameEnemy_001 *m_GameEnemy_001;
+	CGameEnemy_002 *m_GameEnemy_002;
+	CGameCeiling *m_GameCeiling;
+	CGameDoor *m_GameDoor;
+	CGamePoint *m_GamePoint;
 };
 #endif

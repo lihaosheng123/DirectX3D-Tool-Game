@@ -1,3 +1,4 @@
-﻿  CBuildManager.cpp
+﻿  CGame.cpp
+d:\githubcode\directx9\directx9\cgame.cpp(93): warning C4305: '引数': 'double' から 'float' へ切り詰めます。
   DirectX9.vcxproj -> D:\GitHubCode\DirectX9\Debug\DirectX9.exe
   DirectX9.vcxproj -> D:\GitHubCode\DirectX9\Debug\DirectX9.pdb (Partial PDB)
